@@ -7,8 +7,8 @@ import About from './components/About';
 // import Contact from './components/Contact';
 // import Footer from './components/Footer';
 // import Gallery from './components/Gallery';
-// import Menu from './components/Menu';
-// import Order from './components/Order';
+import Header from './components/Header';
+import Home from './components/Home';
 // import ThanksPol from './components/ThanksPol';
 // import ThanksEng from './components/ThanksEng';
 
@@ -16,8 +16,8 @@ import './sass/components/About.scss';
 // import './sass/components/Contact.scss';
 // import './sass/components/Footer.scss';
 // import './sass/components/Gallery.scss';
-// import './sass/components/Menu.scss';
-// import './sass/components/Order.scss';
+import './sass/components/Header.scss';
+import './sass/components/Home.scss';
 // import './sass/components/Thanks.scss';
 // import './sass/components/Slider.scss';
 // import './sass/helpers/variables.scss';
@@ -30,6 +30,8 @@ function App() {
           <Routes>
             <Route exact path='/' element={
               <>
+                <Header/>
+                <Home/>
                 <About/>
               </>
             }/>
@@ -44,7 +46,7 @@ function App() {
 //           <Routes>
 //             <Route exact path='/' element={
 //               <>
-//                 <Menu language={'pol'} />
+//                 <Header language={'pol'} />
 //                 <About language={'pol'} />
 //                 <Gallery language={'pol'} />
 //                 <Contact language={'pol'} />
@@ -54,7 +56,7 @@ function App() {
 //             }/>
 //             <Route exact path='/eng' element={
 //               <>
-//                 <Menu />
+//                 <Header />
 //                 <About />
 //                 <Gallery />
 //                 <Contact />

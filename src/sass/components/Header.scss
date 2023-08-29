@@ -1,0 +1,37 @@
+@import '../helpers/variables.scss';
+
+#Header {
+    // background-color: $silver;
+    background-color: $black;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 160px;
+    .Header__logo {
+        height: 120px;
+        display: inline-block;
+    }
+    .Header__menu {
+        list-style-type: none;
+    }
+        
+    .Header__menu li {
+        display: inline-block;
+        padding: 8px;
+    }
+    
+    .Header__flags {
+        // float: right;
+        float: inline-end;
+        padding-right: 30px;
+    }
+    
+    .Header__flags img {
+        $height: 30px;
+        height: $height;
+        width: calc(($height * 8) / 5);
+        padding: 0 5px;
+    }
+}
+
