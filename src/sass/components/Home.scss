@@ -1,9 +1,42 @@
+@import '../helpers/variables.scss';
+
 #Home {
-    font-size: 2em;
-    text-align: center;
-    margin: 0;
-    line-height: 0;
-    &:nth-of-type(3) {
-        color: yellow;
+    background-color: $black;
+    color: $white;
+    .__show {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .__beginning {
+            font-size: 2em;
+            text-align: center;
+        }
+        .__wrapper {
+            p {
+                font-size: 2em;
+                text-align: center;
+                margin: 0;
+                line-height: 0;
+                &:nth-of-type(3) {
+                    color: yellow;
+                }
+            }
+        }        
+    }
+    .container{
+        display: inline-block;
+        .typed-out {
+            overflow: hidden;
+            border-right: .15em solid orange;
+            white-space: nowrap;
+            animation: typing 2400ms steps(32) infinite;
+            font-size: 1.6rem;
+            width: 0;
+            @keyframes typing {
+                from { width: 0 }
+                to { width: 100% }
+            }
+        }
     }
 }
+

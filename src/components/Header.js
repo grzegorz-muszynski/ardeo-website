@@ -10,9 +10,9 @@ export default function About() {
 
     return (
         <section id='Header'>
-            <img class="Header__logo" src={logo} alt="Tworzenie stron internetowych" />
+            <img className="Header__logo" src={logo} alt="Tworzenie stron internetowych" />
             
-            <ul class="Header__menu">
+            <ul className="Header__menu">
                 <li href="#Home">{flag.language === "polish" ? "Start" : "Home"}</li>
                 <li href="#About">{flag.language === "polish" ? "O nas" : "About"}</li>
                 <li href="#Projects">{flag.language === "polish" ? "Portfolio" : "Projects"}</li>
