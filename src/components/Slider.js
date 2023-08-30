@@ -1,52 +1,23 @@
+const images = require.context('../assets/slider', false);
+const imageList = images.keys().map(image => images(image));
+
 export default function Slider () {
 
     return (
         <section id="Slider">
             <div className="__track">
-                <div className="__icon">
-                    <img src={require("../assets/slider/css-3.png")} alt="CSS" />
-                </div>
-                <div className="__icon">
-                    <img src={require("../assets/slider/html-5.png")} alt="HTML" />
-                </div>
-                <div className="__icon">
-                    <img src={require("../assets/slider/js.png")} alt="JavaScript" />
-                </div>
-                <div className="__icon">
-                    <img src={require("../assets/slider/react.png")} alt="React" />
-                </div>
-                <div className="__icon">
-                    <img src={require("../assets/slider/redux.png")} alt="Redux" />
-                </div>
-                <div className="__icon">
-                    <img src={require("../assets/slider/jquery.png")} alt="jQuery" />
-                </div>
-                <div className="__icon">
-                    <img src={require("../assets/slider/expressjs.png")} alt="Express.js" />
-                </div>
+                {imageList.map((image, index) => (
+                    <div className="__icon">
+                        <img key={index} src={image} alt={`Strony i aplikacje Małopolska ${index}`} />
+                    </div>
+                ))}
 
-            {/* Duplication of icons above */}
-                <div className="__icon">
-                    <img src={require("../assets/slider/css-3.png")} alt="CSS" />
-                </div>
-                <div className="__icon">
-                    <img src={require("../assets/slider/html-5.png")} alt="HTML" />
-                </div>
-                <div className="__icon">
-                    <img src={require("../assets/slider/js.png")} alt="JavaScript" />
-                </div>
-                <div className="__icon">
-                    <img src={require("../assets/slider/react.png")} alt="React" />
-                </div>
-                <div className="__icon">
-                    <img src={require("../assets/slider/redux.png")} alt="Redux" />
-                </div>
-                <div className="__icon">
-                    <img src={require("../assets/slider/jquery.png")} alt="jQuery" />
-                </div>
-                <div className="__icon">
-                    <img src={require("../assets/slider/expressjs.png")} alt="Express.js" />
-                </div>
+                {/* Duplication of icons above */}
+                {imageList.map((image, index) => (
+                    <div className="__icon">
+                        <img key={'99', index} src={image} alt={`Strony i aplikacje Małopolska | 2.${index}`} />
+                    </div>
+                ))}
             </div>
         </section>
     )

@@ -1,55 +1,61 @@
+@import '../helpers/variables.scss';
 @import '../helpers/keyframes.scss';
 
 #Slider {
-    height: 250px;
+    // height: 250px;
+    height: 200px;
     margin: auto;
     position: relative;
-    width: 90%;
+    // width: 90%;
+    border-top: 8px solid $red-logo;
+    border-bottom: 8px solid $red-logo;
+    background-color: white;
+    width: 100%;
     display: grid;
     place-items: center;  
     overflow: hidden; 
     .__track {
         display: flex;
-        width: calc(250px * 8);
-        animation: scroll 10s linear infinite;
+        width: calc(250px * 32);
+        animation: scroll 16s linear infinite;
         &:hover {
             animation-play-state: paused;
         }
-    }
-    .__icon {
-        height: 200px;
-        width: 250px;
-        display: flex;
-        align-items: center;
-        justify-content: center; // mine
-        padding: 15px;
-        perspective: 100px; // Necessary for moving element on Z axis
-        img {
-            // width: 100%;
-            max-height: 70%; // mine
-            max-width: 90%; // mine
-            transition: transform 1s;
-            &:hover {
-                transform: translateZ(20px);
+        &::before,
+        &::after {
+            background: linear-gradient(to rigth, rgba(255, 255, 255, 1) 0%);
+            content: '';
+            height: 100%;
+            position: absolute;
+            width: 15%;
+            z-index: 2;
+        }
+        &::before {
+            left: 0;
+            top: 0;
+        }
+        &::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
+        .__icon {
+            height: 200px;
+            // width: 250px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // padding: 15px;
+            perspective: 100px; // Necessary for moving element on Z axis
+            img {
+                max-height: 60%;
+                max-width: 80%;
+                transition: transform 1s;
+                &:hover {
+                    transform: translateZ(20px);
+                }
             }
         }
-    }
-    &::before,
-    &::after {
-        background: linear-gradient(to rigth, rgba(255, 255, 255, 1) 0%);
-        content: '';
-        height: 100%;
-        position: absolute;
-        width: 15%;
-        z-index: 2;
-    }
-    &::before {
-        left: 0;
-        top: 0;
-    }
-    &::after {
-        right: 0;
-        top: 0;
-        transform: rotateZ(180deg);
     }
 }

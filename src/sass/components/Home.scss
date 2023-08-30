@@ -3,6 +3,7 @@
 #Home {
     background-color: $black;
     color: $white;
+    min-height: 500px; // temporary
     .__show {
         display: flex;
         justify-content: flex-start;
@@ -19,7 +20,7 @@
                 margin: 0;
                 line-height: 0;
                 &:nth-of-type(3) {
-                    color: yellow;
+                    color: $red-logo;
                 }
             }
         }        
