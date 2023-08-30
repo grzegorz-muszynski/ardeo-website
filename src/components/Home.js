@@ -14,32 +14,16 @@ export default function Home () {
     // const titles = gsap.utils.toArray(["web developers", "designers", "Front-end Engineers"]);
     const tl = gsap.timeline({ repeat: -1 });
     
-    // titles.forEach(title => {
-    //     const splitTitle = new SplitTextJS(title);
-        
-    //     tl.from(splitTitle.chars, {
-    //         opacity: 0,
-    //         y: 80,
-    //         rotateX: -90,
-    //         stagger: .02
-    //     }, "<").to(splitTitle.chars, {
-    //         opacity: 0,
-    //         y: -80,
-    //         rotateX: 90,
-    //         stagger: .02 
-    //     }, "<1")
-    // });
-    
     useEffect(() => {
         titles.forEach(title => {
-                const splitTitle = new SplitTextJS(title);
-            
-                tl.from(splitTitle.chars, {
-                        opacity: 0,
-                        y: 80,
-            rotateX: -90,
-            stagger: .02
-        }, "<").to(splitTitle.chars, {
+            const splitTitle = new SplitTextJS(title);
+
+            tl.from(splitTitle.chars, {
+                opacity: 0,
+                y: 80,
+                rotateX: -90,
+                stagger: .02
+            }, "<").to(splitTitle.chars, {
                 opacity: 0,
                 y: -80,
                 rotateX: 90,
@@ -50,6 +34,7 @@ export default function Home () {
 
     return (
         <section id="Home">
+            {/* Animated introduction */}
             <div className="__show">
                 <span className="__beginning">{flag.language === "polish" ? "Jesteśmy" : "We are"}</span>
                 <div className="__wrapper">
@@ -61,8 +46,8 @@ export default function Home () {
                     <p>Front-end Engineers</p> */}
                 </div>
             </div>
-            <div class="container">
-                <div class="typed-out">{flag.language === "polish" ? "To zdanie ma dokładnie 32 znaki" : "We have 32 signs here,absolutely"}</div>
+            <div className="__text">
+                <div className="__text-animated">{flag.language === "polish" ? "To zdanie ma dokładnie 32 znaki" : "We have 32 signs here,absolutely"}</div>
             </div>
         </section>
     )

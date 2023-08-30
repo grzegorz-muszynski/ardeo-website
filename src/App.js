@@ -9,6 +9,7 @@ import About from './components/About';
 // import Gallery from './components/Gallery';
 import Header from './components/Header';
 import Home from './components/Home';
+import Slider from './components/Slider';
 // import ThanksPol from './components/ThanksPol';
 // import ThanksEng from './components/ThanksEng';
 
@@ -19,7 +20,7 @@ import './sass/components/About.scss';
 import './sass/components/Header.scss';
 import './sass/components/Home.scss';
 // import './sass/components/Thanks.scss';
-// import './sass/components/Slider.scss';
+import './sass/components/Slider.scss';
 // import './sass/helpers/variables.scss';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
               <>
                 <Header/>
                 <Home/>
+                <Slider/>
                 <About/>
               </>
             }/>

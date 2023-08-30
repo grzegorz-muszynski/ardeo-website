@@ -11,6 +11,7 @@
             font-size: 2em;
             text-align: center;
         }
+        // Changing text of introduction
         .__wrapper {
             p {
                 font-size: 2em;
@@ -23,9 +24,10 @@
             }
         }        
     }
-    .container{
+    // Typed out text
+    .__text{
         display: inline-block;
-        .typed-out {
+        .__text-animated {
             overflow: hidden;
             border-right: .15em solid orange;
             white-space: nowrap;
