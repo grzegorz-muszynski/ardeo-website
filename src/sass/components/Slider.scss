@@ -21,24 +21,24 @@
         &:hover {
             animation-play-state: paused;
         }
-        &::before,
-        &::after {
-            background: linear-gradient(to rigth, rgba(255, 255, 255, 1) 0%);
-            content: '';
-            height: 100%;
-            position: absolute;
-            width: 15%;
-            z-index: 2;
-        }
-        &::before {
-            left: 0;
-            top: 0;
-        }
-        &::after {
-            right: 0;
-            top: 0;
-            transform: rotateZ(180deg);
-        }
+        // &::before,
+        // &::after {
+        //     background: linear-gradient(to rigth, rgba(255, 255, 255, 1) 0%);
+        //     content: '';
+        //     height: 100%;
+        //     position: absolute;
+        //     width: 15%;
+        //     z-index: 2;
+        // }
+        // &::before {
+        //     left: 0;
+        //     top: 0;
+        // }
+        // &::after {
+        //     right: 0;
+        //     top: 0;
+        //     transform: rotateZ(180deg);
+        // }
         .__icon {
             height: 200px;
             // width: 250px;

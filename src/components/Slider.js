@@ -15,7 +15,7 @@ export default function Slider () {
                 {/* Duplication of icons above */}
                 {imageList.map((image, index) => (
                     <div className="__icon">
-                        <img key={'99', index} src={image} alt={`Strony i aplikacje Małopolska | 2.${index}`} />
+                        <img key={index + '00 '} src={image} alt={`Strony i aplikacje Małopolska | 2.${index}`} />
                     </div>
                 ))}
             </div>
