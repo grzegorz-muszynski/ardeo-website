@@ -2,14 +2,19 @@
 
 #Header {
     // background-color: $silver;
+    position: fixed;
+    top: 0;
+    border-bottom: 2px solid $red-logo;
+    z-index: 6;
+    width: 100vw;
     background-color: $black;
     color: $white;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 160px;
+    height: $header-height;
     .Header__logo {
-        height: 120px;
+        height: 100px;
         display: inline-block;
     }
     .Header__menu {

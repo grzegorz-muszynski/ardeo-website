@@ -2,12 +2,13 @@
 
 #Home {
     background-color: $black;
-    border-top: 2px solid $red-logo;
     color: $white;
     height: 520px; // temporary
     display: flex;
     // justify-content: space-around;
     justify-content: center;
+    margin-top: $header-height;
+
     .__info {
         display: flex;
         flex-direction: column;
