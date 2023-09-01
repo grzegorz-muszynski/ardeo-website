@@ -1,10 +1,15 @@
-export default function About() {
+import { useSelector } from "react-redux";
 
-    return (
-        <section id='About'>
-            <span className="About__text">
-                <h1>foooooooooooo</h1>        
-            </span>
-        </section>
-    )
+export default function About() {
+  const flag = useSelector(state => state.flag);
+
+  return (
+    <section id="About">
+      <span className="__box">
+        <div className="__text">
+            <div className="__text-animated">{flag.language === "polish" ? "To zdanie ma dokładnie 32 znaki" : "We have 32 signs here,absolutely"}</div>
+        </div>      
+      </span>
+    </section>
+  );
 }

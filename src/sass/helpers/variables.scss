@@ -1,7 +1,10 @@
-// @font-face {
-//     font-family: lato;
-//     src: url(../../assets/fonts/Lato-Medium.ttf);
-// }
+// <style>
+//   @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&family=Montserrat&display=swap');
+// </style>
+@font-face {
+    font-family: "archivo";
+    src: url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&family=Montserrat&display=swap');
+}
 
 // Fonts
 // $lato: lato;
@@ -13,6 +16,10 @@ $silver: rgb(211,211,211);
 $black: #19161A;
 $white: hsl(0, 0%, 90%);
 $red-logo: #FF4057;
+$red-lighter: hsl(353, 100%, 70%);
+
+// Animation time
+$animations: 1s;
 
 // Media
 $threshold1: 576px;

@@ -1,5 +1,4 @@
 @import '../helpers/variables.scss';
-@import '../helpers/keyframes.scss';
 
 #Slider {
     // height: 250px;
@@ -21,24 +20,6 @@
         &:hover {
             animation-play-state: paused;
         }
-        // &::before,
-        // &::after {
-        //     background: linear-gradient(to rigth, rgba(255, 255, 255, 1) 0%);
-        //     content: '';
-        //     height: 100%;
-        //     position: absolute;
-        //     width: 15%;
-        //     z-index: 2;
-        // }
-        // &::before {
-        //     left: 0;
-        //     top: 0;
-        // }
-        // &::after {
-        //     right: 0;
-        //     top: 0;
-        //     transform: rotateZ(180deg);
-        // }
         .__icon {
             height: 200px;
             // width: 250px;
@@ -57,5 +38,14 @@
                 }
             }
         }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 16));
     }
 }

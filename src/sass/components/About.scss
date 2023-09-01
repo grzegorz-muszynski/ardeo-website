@@ -1,0 +1,21 @@
+#About {
+    .__box {
+
+        // Typed out text
+        .__text{
+            display: inline-block;
+            .__text-animated {
+                overflow: hidden;
+                border-right: .15em solid orange;
+                white-space: nowrap;
+                animation: typing 2400ms 3500ms steps(32) infinite;
+                font-size: 1.6rem;
+                width: 100%; // Change for 0
+                @keyframes typing {
+                    from { width: 0 }
+                    to { width: 100% }
+                }
+            }
+        }
+    }
+}

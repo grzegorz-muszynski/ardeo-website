@@ -35,20 +35,22 @@ export default function Home () {
     return (
         <section id="Home">
             {/* Animated introduction */}
-            <div className="__show">
-                <span className="__beginning">{flag.language === "polish" ? "Jesteśmy" : "We are"}</span>
-                <div className="__wrapper">
-                    <p>{flag.language === "polish" ? "web developerami" : "web developers"}</p>
-                    <p>{flag.language === "polish" ? "designerami" : "designers"}</p>
-                    <p>{flag.language === "polish" ? "programistami frontendowymi" : "Front-end Engineers"}</p>
-                    {/* <p>web developers</p>
-                    <p>designers</p>
-                    <p>Front-end Engineers</p> */}
+            <div className="__info">
+                <div className="__show">
+                    <span className="__beginning">{flag.language === "polish" ? "Jesteśmy" : "We are"}</span>
+                    <span className="__wrapper">
+                        <p>{flag.language === "polish" ? "web developerami" : "web developers"}</p>
+                        <p>{flag.language === "polish" ? "designerami" : "designers"}</p>
+                        <p>{flag.language === "polish" ? "programistami frontendowymi" : "Front-end Engineers"}</p>
+                    </span>
+                </div>
+                <div className="__buttons">
+                    <a href="#Header" >{flag.language === "polish" ? "Napisz do nas" : "Hire us"}</a>
+                    <a href="#Portfolio" >{flag.language === "polish" ? "Sprawdź nasze portfolio" : "View our portfolio"}</a>
                 </div>
             </div>
-            <div className="__text">
-                <div className="__text-animated">{flag.language === "polish" ? "To zdanie ma dokładnie 32 znaki" : "We have 32 signs here,absolutely"}</div>
-            </div>
+            <img className="__photo" src={require("../assets/home/me.png")} alt="Programiści Kraków" />
+
         </section>
     )
 } 

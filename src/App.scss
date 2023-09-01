@@ -10,11 +10,11 @@
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 12px hsl(74, 80%, 26%);
+    box-shadow: inset 0 0 12px $red-lighter;
 }
 ::-webkit-scrollbar-thumb {
     background-color: $red-logo;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: hsl(74, 80%, 31%);
+    background: $red-lighter;
   }

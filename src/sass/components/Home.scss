@@ -2,46 +2,74 @@
 
 #Home {
     background-color: $black;
+    border-top: 2px solid $red-logo;
     color: $white;
-    min-height: 500px; // temporary
-    .__show {
+    height: 520px; // temporary
+    display: flex;
+    // justify-content: space-around;
+    justify-content: center;
+    .__info {
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        .__beginning {
-            font-size: 2em;
-            text-align: center;
-        }
-        // Changing text of introduction
-        .__wrapper {
-            p {
-                font-size: 2em;
-                // text-align: center;
-                text-align: left;
-                margin: 0;
-                line-height: 0;
-                &:nth-of-type(3) {
-                    color: $red-logo;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        .__show {
+            width: 380px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .__beginning {
+                // font-size: 2em;
+                font-size: 20px;
+                text-align: center;
+                padding-right: 6px;
+            }
+            // Changing text of introduction
+            .__wrapper {
+                p {
+                    // font-size: 2em;
+                    font-size: 20px;
+                    // text-align: center;
+                    text-align: left;
+                    margin: 0;
+                    line-height: 0;
+                    &:nth-of-type(3) {
+                        color: $red-logo;
+                    }
                 }
             }
-        }        
-    }
-    // Typed out text
-    .__text{
-        display: inline-block;
-        .__text-animated {
-            overflow: hidden;
-            border-right: .15em solid orange;
-            white-space: nowrap;
-            animation: typing 2400ms steps(32) infinite;
-            // animation: typing 2400ms steps(32);
-            font-size: 1.6rem;
-            width: 100%; // Change for 0
-            @keyframes typing {
-                from { width: 0 }
-                to { width: 100% }
+        }
+        .__buttons {
+            margin-top: 70px;
+            // display: flex;
+            // justify-content: space-between;
+            a {
+                text-decoration: none;
+                padding: 8px 16px;
+                font-weight: 500;
+                border-radius: 16px;
+                &:nth-of-type(odd) {
+                    background-color: $red-logo;
+                    color: $black;
+                    margin-right: 10px;
+                    &:hover {
+                        
+                    }
+                }
+                &:nth-of-type(even) {
+                    color: $red-logo;
+                    border: 1px solid $red-logo;
+                    &:hover {
+                        
+                    }
+
+                }
             }
         }
     }
+    .__photo {
+        height: 700px;
+        display: inline-block;
+    }    
 }
 

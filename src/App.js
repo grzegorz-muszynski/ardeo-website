@@ -28,22 +28,20 @@ import './sass/components/Slider.scss';
 function App() {
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 3000);
-  // }, []);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3500);
+  }, []);
 
   return (
     <Router>
       <div id="App">
-        {loading ? (
-          <Preloader/>  
-        ) : (
           <Routes>
             <Route exact path='/' element={
               <>
+                {loading && (<Preloader/>)}
                 <Header/>
                 <Home/>
                 <Slider/>
@@ -56,34 +54,5 @@ function App() {
     </Router>
   );
 }
-//   return (
-//     <Router>
-//       <div id="App">
-//           <Routes>
-//             <Route exact path='/' element={
-//               <>
-//                 <Header language={'pol'} />
-//                 <About language={'pol'} />
-//                 <Gallery language={'pol'} />
-//                 <Contact language={'pol'} />
-//                 <Order language={'pol'} />
-//                 <Footer language={'pol'} />
-//               </>
-//             }/>
-//             <Route exact path='/eng' element={
-//               <>
-//                 <Header />
-//                 <About />
-//                 <Gallery />
-//                 <Contact />
-//                 <Order />
-//                 <Footer />
-//               </>} 
-//             />
-//           </Routes>
-//       </div>
-//     </Router>
-//   );
-// }
 
 export default App;
