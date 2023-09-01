@@ -32,39 +32,40 @@ export default function Home () {
 
     return (
         <section id="Home">
-            {/* Animated introduction */}
-            <div className="__info">
-                <h1 className="__title">{flag.language === "polish" ? "Co możemy dla Ciebie zrobić?" : "How can We help you?"}</h1>
-                <div className="__show">
-                    <span className="__beginning">{flag.language === "polish" ? "Jesteśmy" : "We are"}</span>
-                    <span className="__wrapper">
-                        <p className="forGSAP">
-                            {flag.language === "polish" ?
-                            "web developerami" 
-                            : 
-                            "web developers"}
-                        </p>
-                        <p className="forGSAP">
-                            {flag.language === "polish" ?
-                            "designerami" 
-                            : 
-                            "designers"}
-                        </p>
-                        <p className="forGSAP">
-                            {flag.language === "polish" ?
-                            "programistami frontendowymi" 
-                            : 
-                            "Front-end Engineers"}
-                        </p>
-                    </span>
+            <div className="__container">
+                {/* Animated introduction */}
+                <div className="__info">
+                    <h1 className="__title">{flag.language === "polish" ? "Co możemy dla Ciebie zrobić?" : "How can We help you?"}</h1>
+                    <div className="__show">
+                        <span className="__beginning">{flag.language === "polish" ? "Jesteśmy" : "We are"}</span>
+                        <span className="__wrapper">
+                            <p className="forGSAP">
+                                {flag.language === "polish" ?
+                                "web developerami" 
+                                : 
+                                "web developers"}
+                            </p>
+                            <p className="forGSAP">
+                                {flag.language === "polish" ?
+                                "designerami" 
+                                : 
+                                "designers"}
+                            </p>
+                            <p className="forGSAP">
+                                {flag.language === "polish" ?
+                                "programistami frontendowymi" 
+                                : 
+                                "Front-end Engineers"}
+                            </p>
+                        </span>
+                    </div>
+                    <div className="__buttons">
+                        <a href="#Header" >{flag.language === "polish" ? "Napisz do nas" : "Hire us"}</a>
+                        <a href="#Portfolio" >{flag.language === "polish" ? "Sprawdź nasze portfolio" : "View our portfolio"}</a>
+                    </div>
                 </div>
-                <div className="__buttons">
-                    <a href="#Header" >{flag.language === "polish" ? "Napisz do nas" : "Hire us"}</a>
-                    <a href="#Portfolio" >{flag.language === "polish" ? "Sprawdź nasze portfolio" : "View our portfolio"}</a>
-                </div>
+                <img className="__photo" src={require("../assets/home/me.png")} alt="Programiści Kraków" />
             </div>
-            <img className="__photo" src={require("../assets/home/me.png")} alt="Programiści Kraków" />
-
         </section>
     )
 } 

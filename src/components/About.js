@@ -7,12 +7,26 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 export default function About() {
   const flag = useSelector(state => state.flag);
   const link = '../assets/about/computers.jpg';
-  const handleScroll = () => setOffsetY(window.pageYOffset);
-  // Parallax effect
-  const [offsetY, setOffsetY] = useState(0);
+
   // GSAP
   const titles = gsap.utils.toArray('.__text-animated');
   const tl = gsap.timeline({ repeat: 0 });
+  const [counter, setCounter] = useState(0); // Counts to start typing only once
+  const [isHidden, setIsHidden] = useState(true); // Hides text box at a beginning
+
+  // Parallax effect
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => {
+    // console.log(window.pageYOffset);
+    if (window.pageYOffset > 1918) return;
+    setOffsetY(window.pageYOffset);
+
+    if (window.pageYOffset > 1100 && counter === 0) {
+      setIsHidden(false);
+      setCounter(1);
+    }
+  }
+  
 
   // Mounting event listener for scrolling
   useEffect(() => {
@@ -41,17 +55,17 @@ export default function About() {
               // rotateX: 90,
               stagger: .02 
           }, "<1")
-      });
-  }, [flag.language]);
+      });      
+  }, [flag.language, counter]);
 
   return (
     // Don't know why - background size must be declared inline, if in CSS - browser changes cover for auto
     <section id="About">
         <div 
           className="__box"
-          style={{ transform: `translateY(${ offsetY * 0.7 }px)`}}
+          style={{ transform: `translateY(${ offsetY * 0.6 }px)`}}
         >
-          <div className="__text">
+          <div className="__text" style={isHidden ? {display: "none"} : {display: "block"}}>
               <p className="__text-animated">{flag.language === "polish" ?
                 "Opracowujemy i dostarczamy produkty, które są wysoce funkcjonalne. Ponadto możesz stale rozbudowywać swój portal wedle potrzeb bez względu na to czy jest to strona internetowa, SaaS czy aplikacja mobilna." 
                 : 
@@ -60,14 +74,12 @@ export default function About() {
           </div>     
         </div>
 
-        <div className="__computers" style={{
+        <div className="__wallpaper2" style={{
           backgroundSize: "cover", 
-          // transform: `translateY(${ offsetY * -0.5 }px)`
         }}></div>
 
-        <div className="__people" style={{
+        <div className="__wallpaper1" style={{
           backgroundSize: "cover", 
-          // transform: `translateY(${ offsetY * -0.5 }px)`
         }}></div>
     </section>
   );

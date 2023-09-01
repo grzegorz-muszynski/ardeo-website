@@ -2,82 +2,86 @@
 
 #Home {
     background-color: $black;
-    color: $white;
-    height: 520px; // temporary
-    display: flex;
-    // justify-content: space-around;
-    justify-content: center;
+    height: 620px; // temporary
     margin-top: $header-height;
-
-    .__info {
+    .__container {
+        color: $white;
         display: flex;
-        flex-direction: column;
-        // align-items: center;
-        justify-content: center;
-        .__title {
-            font-family: aeonik;
-            font-size: 40px;
-            font-weight: 100;
-            letter-spacing: -0.05em;
-        }
-        .__show {
-            width: 380px;
+        justify-content: space-between;
+        height: 620px;
+        width: 750px;
+        margin: 0 auto;
+        
+        .__info {
             display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            .__beginning {
-                // font-size: 2em;
-                font-size: 20px;
-                text-align: center;
-                padding-right: 6px;
+            flex-direction: column;
+            // align-items: center;
+            justify-content: center;
+            .__title {
+                font-family: aeonik;
+                font-size: 40px;
+                font-weight: 100;
+                letter-spacing: -0.05em;
             }
-            // Changing text of introduction
-            .__wrapper {
-                p {
+            .__show {
+                width: 380px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                .__beginning {
                     // font-size: 2em;
                     font-size: 20px;
-                    // text-align: center;
-                    text-align: left;
-                    margin: 0;
-                    line-height: 0;
-                    &:nth-of-type(3) {
+                    text-align: center;
+                    padding-right: 6px;
+                }
+                // Changing text of introduction
+                .__wrapper {
+                    p {
+                        // font-size: 2em;
+                        font-size: 20px;
+                        // text-align: center;
+                        text-align: left;
+                        margin: 0;
+                        line-height: 0;
+                        &:nth-of-type(3) {
+                            color: $red-logo;
+                        }
+                    }
+                }
+            }
+            .__buttons {
+                margin-top: 70px;
+                // display: flex;
+                // justify-content: space-between;
+                a {
+                    text-decoration: none;
+                    padding: 8px 16px;
+                    font-weight: 500;
+                    border-radius: 16px;
+                    &:nth-of-type(odd) {
+                        background-color: $red-logo;
+                        color: $black;
+                        margin-right: 10px;
+                        &:hover {
+                            
+                        }
+                    }
+                    &:nth-of-type(even) {
                         color: $red-logo;
+                        border: 1px solid $red-logo;
+                        &:hover {
+                            
+                        }
+                        
                     }
                 }
             }
         }
-        .__buttons {
-            margin-top: 70px;
-            // display: flex;
-            // justify-content: space-between;
-            a {
-                text-decoration: none;
-                padding: 8px 16px;
-                font-weight: 500;
-                border-radius: 16px;
-                &:nth-of-type(odd) {
-                    background-color: $red-logo;
-                    color: $black;
-                    margin-right: 10px;
-                    &:hover {
-                        
-                    }
-                }
-                &:nth-of-type(even) {
-                    color: $red-logo;
-                    border: 1px solid $red-logo;
-                    &:hover {
-                        
-                    }
-
-                }
-            }
-        }
+        .__photo {
+            height: 620px;
+            object-fit: cover;
+            display: inline-block;
+        }    
     }
-    .__photo {
-        height: 570px;
-        object-fit: cover;
-        display: inline-block;
-    }    
 }
 
