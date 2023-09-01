@@ -1,15 +1,13 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { gsap } from "gsap";
-// import SplitText from "SplitText";
-// import SplitTextJS from "gsap/SplitText";
 import SplitTextJS from 'split-text-js';
 
 // gsap.registerPlugin(SplitText);
 
 export default function Home () {
     const flag = useSelector(state => state.flag);
-    const titles = gsap.utils.toArray('p');
+    const titles = gsap.utils.toArray('.forGSAP');
     // const titles = ["web developers", "designers", "Front-end Engineers"];
     // const titles = gsap.utils.toArray(["web developers", "designers", "Front-end Engineers"]);
     const tl = gsap.timeline({ repeat: -1 });
@@ -40,9 +38,24 @@ export default function Home () {
                 <div className="__show">
                     <span className="__beginning">{flag.language === "polish" ? "Jesteśmy" : "We are"}</span>
                     <span className="__wrapper">
-                        <p>{flag.language === "polish" ? "web developerami" : "web developers"}</p>
-                        <p>{flag.language === "polish" ? "designerami" : "designers"}</p>
-                        <p>{flag.language === "polish" ? "programistami frontendowymi" : "Front-end Engineers"}</p>
+                        <p className="forGSAP">
+                            {flag.language === "polish" ?
+                            "web developerami" 
+                            : 
+                            "web developers"}
+                        </p>
+                        <p className="forGSAP">
+                            {flag.language === "polish" ?
+                            "designerami" 
+                            : 
+                            "designers"}
+                        </p>
+                        <p className="forGSAP">
+                            {flag.language === "polish" ?
+                            "programistami frontendowymi" 
+                            : 
+                            "Front-end Engineers"}
+                        </p>
                     </span>
                 </div>
                 <div className="__buttons">

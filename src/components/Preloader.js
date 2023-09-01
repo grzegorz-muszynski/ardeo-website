@@ -7,7 +7,7 @@ export default function Preloader() {
   return (
     <section id="Preloader">
       <div className="__box">
-        <span class="__icon" >
+        <span className="__icon" >
             <LogoIcon/>
         </span>
         <span className="__logo" >
