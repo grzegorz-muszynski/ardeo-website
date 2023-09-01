@@ -14,11 +14,12 @@ export default function Home () {
     const [start, setStart] = useState(false);
 
     useEffect(() => {
-      setTimeout(() => {
-        setStart(true);
-      }, 2500);
+        setTimeout(() => {
+            setStart(true);
+        }, 2500);
     }, []);
     
+    // Don't know why useEffect below doesn't start at first run so it needs a trigger above
     useEffect(() => {
         titles.forEach(title => {
             const splitTitle = new SplitTextJS(title);
