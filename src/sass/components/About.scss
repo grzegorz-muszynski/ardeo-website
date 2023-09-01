@@ -1,14 +1,16 @@
 // @import '../helpers/variables.scss';
 
 #About {
-    background-image: url('../../assets/about/computers.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat,;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 1000px;
+    .__wallpaper {
+      background-image: url('../../assets/about/computers.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat,;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 1000px;
+    }
     
     .__box {
         // Typed out text

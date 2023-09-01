@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { gsap } from "gsap";
 import SplitTextJS from 'split-text-js';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 export default function About() {
   const flag = useSelector(state => state.flag);
@@ -35,17 +36,26 @@ export default function About() {
   }, [flag.language]);
 
   return (
-    <section 
-      id="About">
-      <span className="__box">
-        <div className="__text">
-            <p className="__text-animated">{flag.language === "polish" ?
-              "Opracowujemy i dostarczamy produkty, które są wysoce funkcjonalne. Ponadto możesz stale rozbudowywać swój portal wedle potrzeb bez względu na to czy jest to strona internetowa, SaaS czy aplikacja mobilna." 
-              : 
-              "We develop and deliver     products that are highly functional. In addition, you can constantly expand your portal according to your needs, regardless of whether it is a website, SaaS or a mobile application."}
-            </p>
-        </div>     
-      </span>
+    <section id="About">
+      <Parallax>
+        <ParallaxLayer>
+          <div class="__wallpaper">
+            sfdsf
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer>
+          <span className="__box">
+            <div className="__text">
+                <p className="__text-animated">{flag.language === "polish" ?
+                  "Opracowujemy i dostarczamy produkty, które są wysoce funkcjonalne. Ponadto możesz stale rozbudowywać swój portal wedle potrzeb bez względu na to czy jest to strona internetowa, SaaS czy aplikacja mobilna." 
+                  : 
+                  "We develop and deliver     products that are highly functional. In addition, you can constantly expand your portal according to your needs, regardless of whether it is a website, SaaS or a mobile application."}
+                </p>
+            </div>     
+          </span>
+        </ParallaxLayer>
+      </Parallax>
     </section>
   );
 }
