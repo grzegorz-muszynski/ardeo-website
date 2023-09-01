@@ -2,9 +2,10 @@
 
 #Slider {
     // height: 250px;
-    height: 150px;
+    // height: $slider-height;
     margin: auto;
     position: relative;
+    z-index: 2;
     // width: 90%;
     border-top: 8px solid $red-logo;
     border-bottom: 8px solid $red-logo;

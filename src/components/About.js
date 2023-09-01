@@ -36,25 +36,40 @@ export default function About() {
   }, [flag.language]);
 
   return (
+    // Don't know why - background size must be declared inline, if in CSS - browser changes cover for auto
     <section id="About">
-      <Parallax>
-        <ParallaxLayer>
-          <div class="__wallpaper">
-            sfdsf
-          </div>
+      <Parallax pages={2}>
+        
+        <ParallaxLayer
+          offset={0}
+          factor={1}
+          className="__computers"
+          style={{backgroundSize: "cover"}}
+        />
+
+
+        <ParallaxLayer
+          offset={1}
+          factor={1}
+          className="__people"
+          style={{backgroundSize: "cover"}}
+        />
+
+        <ParallaxLayer
+          className="__box-container"
+          sticky={{ start: 0.2, end: 1.8 }}
+        >
+            <div className="__box">
+              <div className="__text">
+                  <p className="__text-animated">{flag.language === "polish" ?
+                    "Opracowujemy i dostarczamy produkty, które są wysoce funkcjonalne. Ponadto możesz stale rozbudowywać swój portal wedle potrzeb bez względu na to czy jest to strona internetowa, SaaS czy aplikacja mobilna." 
+                    : 
+                    "We develop and deliver     products that are highly functional. In addition, you can constantly expand your portal according to your needs, regardless of whether it is a website, SaaS or a mobile application."}
+                  </p>
+              </div>     
+            </div>
         </ParallaxLayer>
 
-        <ParallaxLayer>
-          <span className="__box">
-            <div className="__text">
-                <p className="__text-animated">{flag.language === "polish" ?
-                  "Opracowujemy i dostarczamy produkty, które są wysoce funkcjonalne. Ponadto możesz stale rozbudowywać swój portal wedle potrzeb bez względu na to czy jest to strona internetowa, SaaS czy aplikacja mobilna." 
-                  : 
-                  "We develop and deliver     products that are highly functional. In addition, you can constantly expand your portal according to your needs, regardless of whether it is a website, SaaS or a mobile application."}
-                </p>
-            </div>     
-          </span>
-        </ParallaxLayer>
       </Parallax>
     </section>
   );

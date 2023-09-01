@@ -76,6 +76,7 @@
     }
     .__photo {
         height: 570px;
+        object-fit: cover;
         display: inline-block;
     }    
 }

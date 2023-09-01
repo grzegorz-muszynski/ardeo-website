@@ -7,7 +7,7 @@
     src: url('../../assets/fonts/Aeonik-Pro-Light.ttf');
 }
 
-// *{border: 1px solid red;}
+*{border: 1px solid red;}
 
 // Colors
 $silver: rgb(211,211,211);
@@ -19,8 +19,9 @@ $red-lighter: hsl(353, 100%, 70%);
 // Animation time
 $animations: 1s;
 
-// Slider's icon's width
+// Slider's parameters
 $icon-width: 200px;
+$slider-height: 150px;
 
 // Header's height
 $header-height: 130px;

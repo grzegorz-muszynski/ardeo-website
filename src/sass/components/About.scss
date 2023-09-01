@@ -1,51 +1,40 @@
-// @import '../helpers/variables.scss';
+@import '../helpers/variables.scss';
 
 #About {
-    .__wallpaper {
-      background-image: url('../../assets/about/computers.jpg');
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat,;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 1000px;
-    }
-    
+  .__computers {
+    background-image: url('../../assets/about/computers.jpg');
+  }
+  .__people {
+    background-image: url('../../assets/about/people.jpg');
+  }
+  .__box-container {
     .__box {
-        // Typed out text
-        .__text{
-            display: inline-block;
-            backdrop-filter: blur(10px);
-            width: 370px;
-            padding: 10px 10px 0;
-            border-radius: 20px;;
-            .__text-animated {
-                // height: 400px;
-                font-family: aeonik, monospace;
-                // text-align: center;
-                text-align: left;
-                // display: inline-block;
-                color: white;
-                overflow: hidden;
-                border-right: .15em solid orange;
-                text-wrap: wrap;
-                // white-space: nowrap;
-                // animation: typing 1400ms 3500ms steps(184) infinite;
-                font-size: 1.6rem;
-                width: 100%; // Change for 0
-            }
+      // display: flex;
+      // justify-content: center;
+      // text-align: center;
+      // Typed out text
+      height: 600px;
+      .__text {
+        margin: 330px auto 0;
+        // display: inline-block;
+        backdrop-filter: blur(10px);
+        width: 370px;
+        padding: 10px 10px 0;
+        border-radius: 20px;;
+        .__text-animated {
+          // height: 400px;
+          font-family: aeonik, monospace;
+          // text-align: center;
+          text-align: left;
+          // display: inline-block;
+          color: white;
+          overflow: hidden;
+          border-right: .15em solid orange;
+          text-wrap: wrap;
+          font-size: 1.6rem;
+          width: 100%; // Change for 0
         }
+      }
     }
-}
-// @keyframes typing {
-//     from { width: 0 }
-//     to { width: 100% }
-// }
-
-@keyframes t{
-  from {background-size:0 200%}
-}
-@keyframes b{
-  50% {background-position:0 -100%,0 0}
+  }
 }
