@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { gsap } from "gsap";
 import SplitTextJS from 'split-text-js';
@@ -11,6 +11,13 @@ export default function Home () {
     // const titles = ["web developers", "designers", "Front-end Engineers"];
     // const titles = gsap.utils.toArray(["web developers", "designers", "Front-end Engineers"]);
     const tl = gsap.timeline({ repeat: -1 });
+    const [start, setStart] = useState(false);
+
+    useEffect(() => {
+      setTimeout(() => {
+        setStart(true);
+      }, 2500);
+    }, []);
     
     useEffect(() => {
         titles.forEach(title => {
@@ -28,7 +35,7 @@ export default function Home () {
                 stagger: .02 
             }, "<1")
         });
-    }, [flag.language])
+    }, [start, flag.language])
 
     return (
         <section id="Home">

@@ -15,7 +15,6 @@
         .__info {
             display: flex;
             flex-direction: column;
-            // align-items: center;
             justify-content: center;
             .__title {
                 font-family: aeonik;
@@ -51,8 +50,6 @@
             }
             .__buttons {
                 margin-top: 70px;
-                // display: flex;
-                // justify-content: space-between;
                 a {
                     text-decoration: none;
                     padding: 8px 16px;

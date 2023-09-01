@@ -26,7 +26,6 @@ export default function About() {
       setCounter(1);
     }
   }
-  
 
   // Mounting event listener for scrolling
   useEffect(() => {
@@ -43,12 +42,7 @@ export default function About() {
               opacity: 0,
               // y: 80,
               // rotateX: -90,
-              stagger: .02,
-              scrollTrigger: {
-                trigger: '.__text-animated',
-                start: "top: 80%",
-                markers: true
-              }
+              stagger: .02
           }, "<").to(splitTitle.chars, {
               opacity: 1,
               // y: -80,
