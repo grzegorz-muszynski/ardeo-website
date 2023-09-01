@@ -36,6 +36,7 @@ export default function Home () {
         <section id="Home">
             {/* Animated introduction */}
             <div className="__info">
+                <h1 className="__title">{flag.language === "polish" ? "Co możemy dla Ciebie zrobić?" : "How can We help you?"}</h1>
                 <div className="__show">
                     <span className="__beginning">{flag.language === "polish" ? "Jesteśmy" : "We are"}</span>
                     <span className="__wrapper">

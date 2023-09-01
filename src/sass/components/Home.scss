@@ -13,6 +13,12 @@
         flex-direction: column;
         // align-items: center;
         justify-content: center;
+        .__title {
+            font-family: aeonik;
+            font-size: 40px;
+            font-weight: 100;
+            letter-spacing: -0.05em;
+        }
         .__show {
             width: 380px;
             display: flex;
@@ -68,7 +74,7 @@
         }
     }
     .__photo {
-        height: 700px;
+        height: 600px;
         display: inline-block;
     }    
 }

@@ -2,7 +2,7 @@
 
 #Slider {
     // height: 250px;
-    height: 200px;
+    height: 150px;
     margin: auto;
     position: relative;
     // width: 90%;
@@ -15,15 +15,15 @@
     overflow: hidden; 
     .__track {
         display: flex;
-        width: calc(250px * 32);
+        width: calc($icon-width * 32);
         animation: scroll 16s linear infinite;
         &:hover {
             animation-play-state: paused;
         }
         .__icon {
-            height: 200px;
+            height: 150px;
             // width: 250px;
-            width: 200px;
+            width: $icon-width;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -46,6 +46,6 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-250px * 16));
+        transform: translateX(calc(-1 * $icon-width * 16));
     }
 }

@@ -6,6 +6,10 @@
     src: url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&family=Montserrat&display=swap');
 }
 
+@font-face {
+    font-family: "aeonik";
+    src: url('../../assets/fonts/Aeonik-Pro-Light.ttf');
+}
 // Fonts
 // $lato: lato;
 
@@ -20,6 +24,9 @@ $red-lighter: hsl(353, 100%, 70%);
 
 // Animation time
 $animations: 1s;
+
+// Slider's icon's width
+$icon-width: 200px;
 
 // Media
 $threshold1: 576px;
