@@ -3,37 +3,40 @@
 #About {
   .__computers {
     background-image: url('../../assets/about/computers.jpg');
+    background-position: center;
+    height: 100vh;
+
   }
   .__people {
     background-image: url('../../assets/about/people.jpg');
+    background-position: center;
+    height: 100vh;
+
   }
-  .__box-container {
-    .__box {
-      // display: flex;
-      // justify-content: center;
-      // text-align: center;
-      // Typed out text
-      height: 600px;
-      .__text {
-        margin: 330px auto 0;
+  .__box {
+    height: 600px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    .__text {
+      margin: 30px auto 0;
+      // display: inline-block;
+      backdrop-filter: blur(10px);
+      width: 370px;
+      padding: 10px 10px 0;
+      border-radius: 20px;;
+      .__text-animated {
+        // height: 400px;
+        font-family: aeonik, monospace;
+        // text-align: center;
+        text-align: left;
         // display: inline-block;
-        backdrop-filter: blur(10px);
-        width: 370px;
-        padding: 10px 10px 0;
-        border-radius: 20px;;
-        .__text-animated {
-          // height: 400px;
-          font-family: aeonik, monospace;
-          // text-align: center;
-          text-align: left;
-          // display: inline-block;
-          color: white;
-          overflow: hidden;
-          border-right: .15em solid orange;
-          text-wrap: wrap;
-          font-size: 1.6rem;
-          width: 100%; // Change for 0
-        }
+        color: white;
+        overflow: hidden;
+        border-right: .15em solid orange;
+        text-wrap: wrap;
+        font-size: 1.4rem;
+        width: 100%; // Change for 0
       }
     }
   }
