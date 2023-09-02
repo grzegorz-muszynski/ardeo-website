@@ -7,17 +7,16 @@
 //     font-family: $lato;
 // }
 
-// %inputs {
-//     width: 250px;
-//     line-height: 25px;
-//     font-size: 15px;
-//     color:   grey;
-//     margin: 2px 0;
-//     padding: 0;
-//     border: 1px solid black;
-//     border-radius: 2px;
-//     &::placeholder {
-//         font-family: $lato;
-//         text-indent: 4px;
-//     }
-// }
+%inputs {
+    background-color: $silver;
+    line-height: 34px;
+    font-size: 22px;
+    // margin: 2px 0;
+    // padding: 0;
+
+    // border-radius: 4px;
+    &::placeholder {
+        color: hsl(0, 0%, 60%);
+        text-indent: 4px;
+    }
+}

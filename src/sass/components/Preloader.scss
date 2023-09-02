@@ -1,6 +1,5 @@
 @import '../helpers/variables.scss';
 
-
 #Preloader {
     position: fixed;
     z-index: 5;
@@ -26,7 +25,7 @@
                 width: 100px;
                 path {
                     animation: colorChange $animations;
-                    fill:$red-logo
+                    fill: $red-logo;
                 }
             }
         }

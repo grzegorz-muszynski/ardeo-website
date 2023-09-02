@@ -1,10 +1,16 @@
 @font-face {
     font-family: "archivo";
-    src: url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&family=Montserrat&display=swap');
+    src: url('../../assets/fonts/Archivo-Regular.ttf');
+    // src: url('../../assets/fonts/Archivo_ExtraLight200Italic.ttf');
 }
 @font-face {
     font-family: "aeonik";
     src: url('../../assets/fonts/Aeonik-Pro-Light.ttf');
+}
+@font-face {
+    font-family: roboto;
+    // src: url('../../assets/fonts/Roboto-Regular.ttf');
+    src: url('../../assets/fonts/Roboto-Light.ttf');
 }
 
 // *{border: 1px solid red;}
@@ -32,3 +38,5 @@ $threshold2: 768px;
 $threshold3: 992px;
 $threshold4: 1200px;
 $threshold5: 1400px;
+
+*{border: 1px solid red}

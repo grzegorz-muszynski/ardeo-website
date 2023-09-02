@@ -1,0 +1,9 @@
+@import '../helpers/variables.scss';
+
+.Card {
+    height: 500px;
+    width: 400px;
+    background-color: $silver;
+    border: 5px solid $red-logo;
+    border-radius: 20px;
+}

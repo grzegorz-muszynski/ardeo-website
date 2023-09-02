@@ -4,26 +4,27 @@ import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.scss';
 
 import About from './components/About';
-// import Contact from './components/Contact';
-// import Footer from './components/Footer';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 // import Gallery from './components/Gallery';
 import Header from './components/Header';
 import Home from './components/Home';
 import Preloader from './components/Preloader';
+import Projects from './components/Projects';
 import Slider from './components/Slider';
 // import ThanksPol from './components/ThanksPol';
 // import ThanksEng from './components/ThanksEng';
 
 import './sass/components/About.scss';
-// import './sass/components/Contact.scss';
-// import './sass/components/Footer.scss';
-// import './sass/components/Gallery.scss';
+import './sass/components/Card.scss';
+import './sass/components/Contact.scss';
+import './sass/components/Footer.scss';
 import './sass/components/Header.scss';
 import './sass/components/Home.scss';
-// import './sass/components/Thanks.scss';
 import './sass/components/Preloader.scss';
+import './sass/components/Projects.scss';
 import './sass/components/Slider.scss';
-// import './sass/helpers/variables.scss';
+// import './sass/components/Thanks.scss';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -41,11 +42,14 @@ function App() {
           <Routes>
             <Route exact path='/' element={
               <>
-                {loading && (<Preloader/>)}
+                {/* {loading && (<Preloader/>)} */}
                 <Header/>
                 <Home/>
                 <Slider/>
                 <About/>
+                <Projects/>
+                <Contact/>
+                <Footer/>
               </>
             }/>
           </Routes>

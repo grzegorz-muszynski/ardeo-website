@@ -1,0 +1,60 @@
+@import '../helpers/variables.scss';
+@import '../helpers/placeholders.scss';
+
+
+#Contact {
+    height: 600px;
+    background-color: $silver;
+    .__info {
+        width: 300px;
+        margin: 20px auto;
+        .__phone-number,
+        .__email {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            img {
+                height: 30px;
+            }
+            p {
+                margin: 15px;
+                font-family: roboto;            
+                font-size: 25px;
+                line-height: 30px;
+                color: $red-logo;
+                padding-left: 9px;
+            }
+        }
+    }
+    // Submit form
+    form {
+        
+        .__inputs {
+            display: flex;
+            flex-direction: column;
+            input {
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                border-bottom: 1px solid black;
+                @extend %inputs;
+                &::placeholder {
+                    color: hsl(0, 0%, 60%);
+                }
+            }
+            input:nth-of-type(odd) {
+                // background-color: black;
+            }
+            input:nth-of-type(even) {
+                // background-color: black;  
+            }
+        }
+        textarea {
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 30px;
+            width: 300px;
+            @extend %inputs;
+        }
+    }
+}
