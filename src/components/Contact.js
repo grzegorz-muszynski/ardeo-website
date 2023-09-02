@@ -5,7 +5,7 @@ export default function Contact () {
 
     return (
         <section id="Contact">
-            <div>
+            <div className="__container">
                 <h1>{flag.language === "polish" ? "Kontakt" : "Contact"}</h1>
                 <p className="__desc">
                     {flag.language === "polish" ? 
