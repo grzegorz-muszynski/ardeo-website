@@ -6,12 +6,12 @@ export default function Contact () {
     return (
         <section id="Contact">
             <div className="__container">
-                <h1>{flag.language === "polish" ? "Kontakt" : "Contact"}</h1>
+                <h1 className="__title">{flag.language === "polish" ? "Kontakt" : "Contact Us"}</h1>
                 <p className="__desc">
                     {flag.language === "polish" ? 
-                        "Napisz do nas maila, zadzwoń lub wypełnij poniższy formularz - na pewno znajdziemy rozwiązanie dla Ciebie." 
+                        "Napisz do nas maila, zadzwoń lub wypełnij formularz - na pewno znajdziemy rozwiązanie dla Ciebie." 
                         : 
-                        "Write us an e-mail, call us or fill out the form below - we will surely find a solution for you."
+                        "Write us an e-mail, call us or fill out the form - we will surely find a solution for you."
                     }
                 </p>
                 <div className="__info">                

@@ -6,11 +6,27 @@
     // height: 600px;
     background-color: $silver;
     .__container {
+
         width: 600px;
         margin: 20px auto;
+        .__title {
+            font-family: aeonik; 
+            font-family: archivo;
+            // font-family: roboto;
+        }
+        .__desc {
+            // font-family: roboto, monospace;
+            font-family: aeonik;
+            // font-family: aeonik, monospace;
+            font-size: 18px;
+        }
         .__info {
-            width: 300px;
+            width: 350px;
+            padding-left: 15px;
             margin: 20px auto;
+            // border: 8px ridge $red-logo; 
+            // border: 2px dashed $red-logo; 
+            border: 6px double $red-logo; 
             .__phone-number,
             .__email {
                 display: flex;
@@ -36,6 +52,7 @@
                 display: flex;
                 flex-direction: column;
                 input {
+                    width: 430px;
                     margin-bottom: 20px;
                     border-top: none;
                     border-right: none;
@@ -57,7 +74,9 @@
                 border: 1px solid black;
                 padding: 10px;
                 border-radius: 30px;
-                width: 300px;
+                // width: 300px;
+                width: 100%;
+
                 @extend %inputs;
             }
         }
