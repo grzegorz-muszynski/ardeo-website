@@ -42,7 +42,7 @@ function App() {
           <Routes>
             <Route exact path='/' element={
               <>
-                {loading && (<Preloader/>)}
+                {/* {loading && (<Preloader/>)} */}
                 <Header/>
                 <Home/>
                 <Slider/>

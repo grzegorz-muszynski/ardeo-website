@@ -5,7 +5,10 @@ export default function Contact () {
 
     return (
         <section id="Contact">
-            <div className="__container">
+            <div 
+                className="__container"
+                // style={{backgroundSize: "cover"}}
+            >
                 <h1 className="__title">{flag.language === "polish" ? "Kontakt" : "Contact Us"}</h1>
                 <p className="__desc">
                     {flag.language === "polish" ? 
@@ -54,11 +57,15 @@ export default function Contact () {
 
                     {/* <button> replaced with <input> due to Safari browser */}
                     <input 
+                        className="__btn"
                         type="submit"
-                        placeholder={flag.language === "polish" ? "Wyślij" : "Submit"}
+                        value={flag.language === "polish" ? "Wyślij" : "Submit"}
                     />
                 </form>
             </div>
+
+            {/* Background with image */}
+            <img className="__img-background" src={require('../assets/about/laptop.jpg')} alt="Usługi informatyczne" />
         </section>
     )
 }

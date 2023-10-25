@@ -16,6 +16,7 @@
     overflow: hidden; 
     .__track {
         display: flex;
+        cursor: pointer;
         width: calc($icon-width * 32);
         animation: scroll 16s linear infinite;
         &:hover {

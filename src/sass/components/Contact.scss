@@ -3,22 +3,34 @@
 
 
 #Contact {
-    // height: 600px;
-    background-color: $silver;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    height: 800px;
+    .__img-background {
+        width: 50%;
+        // height: 300px;
+        object-fit: cover;
+    }
     .__container {
-
-        width: 600px;
+        // background-color: $silver;
+        width: 50%;
         margin: 20px auto;
         .__title {
+            background-color: $silver;
             font-family: aeonik; 
-            font-family: archivo;
+            // font-family: archivo;
+            font-size: 30px;
+            color: $silver;
+            background-color: black;
             // font-family: roboto;
         }
         .__desc {
-            // font-family: roboto, monospace;
+            color: $silver;
             font-family: aeonik;
-            // font-family: aeonik, monospace;
             font-size: 18px;
+            background-color: black;            // font-family: roboto, monospace;
+            // font-family: aeonik, monospace;
         }
         .__info {
             width: 350px;
@@ -47,20 +59,22 @@
         }
         // Submit form
         form {
-            
+            width: 500px;
             .__inputs {
                 display: flex;
                 flex-direction: column;
                 input {
+                    background-color: black;
                     width: 430px;
                     margin-bottom: 20px;
                     border-top: none;
                     border-right: none;
                     border-left: none;
-                    border-bottom: 1px solid black;
+                    border-bottom: 1px solid $silver;
                     @extend %inputs;
                     &::placeholder {
                         color: hsl(0, 0%, 60%);
+                        // color: $red-logo;
                     }
                 }
                 input:nth-of-type(odd) {
@@ -71,13 +85,19 @@
                 }
             }
             textarea {
-                border: 1px solid black;
-                padding: 10px;
-                border-radius: 30px;
+                background-color: black;
+                border: 1px solid $silver;
+                padding: 0;
+                border-radius: 20px;
                 // width: 300px;
                 width: 100%;
 
                 @extend %inputs;
+            }
+            .__btn {
+                font-size: 20px;
+                background-color: $black;
+                color: $red-logo;
             }
         }
     }
