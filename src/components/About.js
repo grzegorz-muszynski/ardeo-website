@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { gsap } from "gsap";
+
 import SplitTextJS from 'split-text-js';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
@@ -19,6 +20,7 @@ export default function About() {
   const handleScroll = () => {
     // console.log(window.pageYOffset);
     if (window.pageYOffset > 1918) return;
+    console.log(offsetY); 
     setOffsetY(window.pageYOffset);
 
     if (window.pageYOffset > 1100 && counter === 0) {

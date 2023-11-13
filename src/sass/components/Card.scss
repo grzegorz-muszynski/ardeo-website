@@ -1,9 +1,39 @@
 @import '../helpers/variables.scss';
 
 .Card {
-    height: 500px;
-    width: 400px;
-    background-color: $silver;
-    border: 5px solid $red-logo;
-    border-radius: 20px;
+    height: 400px;
+    width: 300px;
+    color: $silver;
+    .__frame {
+        cursor: pointer;
+        display: block;
+        height: 75%;
+        overflow: hidden;
+        .__container {
+            // max-height: 60%;
+            height: 100%;
+            width: 100%;
+            perspective: 100px;
+            :hover {
+                transform: translateZ(30px);
+                transition: transform 1s;
+            }
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+    h2 {
+        text-align: center;
+        // font-family: roboto;
+        font-family: aeonik;
+        // font-family: archivo;
+        font-size: 30px;
+        text-decoration: underline solid $red-logo 1px;
+        text-underline-offset: 8px;    
+        cursor: default;
+    }
 }

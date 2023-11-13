@@ -6,7 +6,7 @@
     background-color: black;
     display: flex;
     justify-content: center;
-    height: 800px;
+    height: 900px;
     .__img-background {
         width: 50%;
         // height: 300px;
@@ -14,13 +14,16 @@
     }
     .__container {
         // background-color: $silver;
+        box-sizing: border-box;
+        border: 1px solid red;
+        padding: 10px 0 0 170px;
         width: 50%;
-        margin: 20px auto;
+        margin: 0 auto;
         .__title {
             background-color: $silver;
             font-family: aeonik; 
             // font-family: archivo;
-            font-size: 30px;
+            font-size: 35px;
             color: $silver;
             background-color: black;
             // font-family: roboto;
@@ -29,16 +32,18 @@
             color: $silver;
             font-family: aeonik;
             font-size: 18px;
-            background-color: black;            // font-family: roboto, monospace;
+            background-color: black;
+            // font-family: roboto, monospace;
             // font-family: aeonik, monospace;
         }
+        // Box with e-mail and phone number
         .__info {
             width: 350px;
             padding-left: 15px;
-            margin: 20px auto;
-            // border: 8px ridge $red-logo; 
-            // border: 2px dashed $red-logo; 
-            border: 6px double $red-logo; 
+            margin: 30px;
+            // border: 6px double $red-logo; 
+            border: 6px double $silver; 
+            // display
             .__phone-number,
             .__email {
                 display: flex;
@@ -89,15 +94,29 @@
                 border: 1px solid $silver;
                 padding: 0;
                 border-radius: 20px;
+                // width: $textbox-width;
                 // width: 300px;
                 width: 100%;
 
                 @extend %inputs;
             }
             .__btn {
+                cursor: pointer;
                 font-size: 20px;
                 background-color: $black;
                 color: $red-logo;
+                position: relative;
+                width: $textarea__button-width;
+                // left: 50%;
+                margin-top: 20px;
+                height: 40px;
+                left: calc(50% - $textarea__button-width / 2);
+                border-radius: 8px;
+                border: 1px solid $silver;
+                &:hover {
+                    color: $silver;
+                    border-color: $red-logo;
+                }
             }
         }
     }
