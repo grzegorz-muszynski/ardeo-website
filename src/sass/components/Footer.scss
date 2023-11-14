@@ -1,6 +1,8 @@
 @import '../helpers/variables.scss';
 
 #Footer {
-    height: 600px;
+    height: 200px;
     background-color: $black;
+    position: relative;
+    z-index: 1; // For hiding laptop's image
 }

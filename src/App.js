@@ -27,7 +27,7 @@ import './sass/components/Slider.scss';
 // import './sass/components/Thanks.scss';
 
 function App() {
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   // useEffect(() => {
   //   setLoading(true);

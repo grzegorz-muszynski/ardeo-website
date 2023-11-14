@@ -7,125 +7,123 @@
     display: flex;
     justify-content: center;
     height: 900px;
+
+    // Laptop's picture
     .__background {
         position: relative;
         width: 50%;
-        border: 1px solid green;
-        .__img {
-            position: absolute;
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        img {
+            position: relative;
+            // z-index: -1;
+            // top: 350px;
             width: 100%;
-            height: 100%;
-            // margin: 25% 0 0;
-
-            // height: 300px;
             object-fit: cover;
-            border: 1px solid red;
         }
     }
+
+    // Container with all information
     .__container {
-        // background-color: $silver;
         box-sizing: border-box;
-        border: 1px solid red;
-        padding: 10px 0 0 170px;
         width: 50%;
-        margin: 0 auto;
-        .__title {
-            background-color: $silver;
-            font-family: aeonik; 
-            // font-family: archivo;
-            font-size: 35px;
-            color: $silver;
-            background-color: black;
-            // font-family: roboto;
-        }
-        .__desc {
-            color: $silver;
-            font-family: aeonik;
-            font-size: 18px;
-            background-color: black;
-            // font-family: roboto, monospace;
-            // font-family: aeonik, monospace;
-        }
-        // Box with e-mail and phone number
-        .__info {
-            width: 350px;
-            padding-left: 15px;
-            margin: 30px;
-            // border: 6px double $red-logo; 
-            border: 6px double $silver; 
-            // display
-            .__phone-number,
-            .__email {
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                img {
-                    height: 30px;
-                }
-                p {
-                    margin: 15px;
-                    font-family: roboto;            
-                    font-size: 25px;
-                    line-height: 30px;
-                    color: $red-logo;
-                    padding-left: 9px;
-                }
+        .__infobox {
+            width: 560px;
+            position: relative;
+            margin: 20px auto;
+            .__title {
+                background-color: $silver;
+                font-family: aeonik; 
+                font-size: 35px;
+                color: $silver;
+                background-color: black;
+                // font-family: roboto;
             }
-        }
-        // Submit form
-        form {
-            width: 500px;
-            .__inputs {
-                display: flex;
-                flex-direction: column;
-                input {
-                    background-color: black;
-                    width: 430px;
-                    margin-bottom: 20px;
-                    border-top: none;
-                    border-right: none;
-                    border-left: none;
-                    border-bottom: 1px solid $silver;
-                    @extend %inputs;
-                    &::placeholder {
-                        color: hsl(0, 0%, 60%);
-                        // color: $red-logo;
+            .__desc {
+                color: $silver;
+                font-family: aeonik;
+                font-size: 18px;
+                background-color: black;
+            }
+            // Box with e-mail and phone number
+            .__info {
+                width: 350px;
+                padding-left: 15px;
+                margin: 30px;
+                border: 6px double $silver; 
+                // display
+                .__phone-number,
+                .__email {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    img {
+                        height: 30px;
+                    }
+                    p {
+                        margin: 15px;
+                        font-family: roboto;            
+                        font-size: 25px;
+                        line-height: 30px;
+                        color: $red-logo;
+                        padding-left: 9px;
                     }
                 }
-                input:nth-of-type(odd) {
-                    // background-color: black;
-                }
-                input:nth-of-type(even) {
-                    // background-color: black;  
-                }
             }
-            textarea {
-                background-color: black;
-                border: 1px solid $silver;
-                padding: 0;
-                border-radius: 20px;
-                // width: $textbox-width;
-                // width: 300px;
-                width: 100%;
-
-                @extend %inputs;
-            }
-            .__btn {
-                cursor: pointer;
-                font-size: 20px;
-                background-color: $black;
-                color: $red-logo;
-                position: relative;
-                width: $textarea__button-width;
-                // left: 50%;
-                margin-top: 20px;
-                height: 40px;
-                left: calc(50% - $textarea__button-width / 2);
-                border-radius: 8px;
-                border: 1px solid $silver;
-                &:hover {
-                    color: $silver;
-                    border-color: $red-logo;
+            // Submit form
+            form {
+                width: 500px;
+                .__inputs {
+                    display: flex;
+                    flex-direction: column;
+                    input {
+                        background-color: black;
+                        width: 430px;
+                        margin-bottom: 20px;
+                        border-top: none;
+                        border-right: none;
+                        border-left: none;
+                        border-bottom: 1px solid $silver;
+                        @extend %inputs;
+                        &::placeholder {
+                            color: hsl(0, 0%, 60%);
+                            // color: $red-logo;
+                        }
+                    }
+                    input:nth-of-type(odd) {
+                        // background-color: black;
+                    }
+                    input:nth-of-type(even) {
+                        // background-color: black;  
+                    }
+                }
+                textarea {
+                    background-color: black;
+                    border: 1px solid $silver;
+                    padding: 0;
+                    border-radius: 20px;
+                    width: 100%;
+                    
+                    @extend %inputs;
+                }
+                .__btn {
+                    cursor: pointer;
+                    font-size: 20px;
+                    background-color: black;
+                    color: $red-logo;
+                    position: relative;
+                    width: $textarea__button-width;
+                    margin-top: 20px;
+                    height: 40px;
+                    left: calc(50% - $textarea__button-width / 2);
+                    border-radius: 8px;
+                    border: 1px solid $silver;
+                    &:hover {
+                        color: $silver;
+                        border-color: $red-logo;
+                    }
                 }
             }
         }

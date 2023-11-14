@@ -14,16 +14,20 @@ export default function About() {
   const tl = gsap.timeline({ repeat: 0 });
   const [counter, setCounter] = useState(0); // Counts to start typing only once
   const [isHidden, setIsHidden] = useState(true); // Hides text box at a beginning
-
+  
   // Parallax effect
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => {
-    // console.log(window.pageYOffset);
-    if (window.pageYOffset > 1918) return;
-    console.log(offsetY); 
-    setOffsetY(window.pageYOffset);
+  const [offsetY, setOffsetY] = useState(0); // The variable
 
-    if (window.pageYOffset > 1100 && counter === 0) {
+  const handleScroll = () => {
+    // The variable below decides when the animated text stops moving up or down
+    if (window.pageYOffset > 1400 || window.innerHeight + window.scrollY < 1240) return;
+
+    // console.log(window.innerHeight + window.pageYOffset)
+    setOffsetY(window.innerHeight + window.scrollY);
+    // console.log(window.innerHeight + window.scrollY);
+
+    // The line below decides when the animated text shows up
+    if (window.innerHeight + window.scrollY > 1300 && counter === 0) {
       setIsHidden(false);
       setCounter(1);
     }
@@ -59,7 +63,8 @@ export default function About() {
     <section id="About">
         <div 
           className="__box"
-          style={{ transform: `translateY(${ offsetY * 0.6 }px)`}}
+          style={{ transform: `translateY(${ (offsetY - 1200) * 0.6 }px)`}}
+          // style={{ transform: `translateY(${offsetY}px)`}}
         >
           <div className="__text" style={isHidden ? {display: "none"} : {display: "block"}}>
               <p className="__text-animated">{flag.language === "polish" ?
@@ -70,9 +75,9 @@ export default function About() {
           </div>     
         </div>
 
-        <div className="__wallpaper2" style={{
+        {/* <div className="__wallpaper2" style={{
           backgroundSize: "cover", 
-        }}></div>
+        }}></div> */}
 
         <div className="__wallpaper1" style={{
           backgroundSize: "cover", 

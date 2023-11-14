@@ -5,25 +5,18 @@
     background-image: url('../../assets/about/computers.jpg');
     background-position: center;
     height: 100vh;
-
-  }
-  .__wallpaper2 {
-    background-image: url('../../assets/about/laptop.jpg');
-    background-position: center;
-    height: 100vh;
-
   }
   .__box {
-    height: 600px;
+    height: 300px;
     width: 100%;
     position: absolute;
     z-index: 1;
     .__text {
-      margin: 10px auto 0;
+      margin: 0 auto 0;
+      padding: 10px 10px;
       // display: inline-block;
       backdrop-filter: blur(30px);
       width: 370px;
-      padding: 10px 10px 0;
       border-radius: 20px;
       .__text-animated {
         // height: 400px;
