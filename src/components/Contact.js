@@ -65,7 +65,9 @@ export default function Contact () {
             </div>
 
             {/* Background with image */}
-            <img className="__img-background" src={require('../assets/about/laptop.jpg')} alt="Usługi informatyczne" />
+            <div className="__background">
+                <img className="__img" src={require('../assets/about/laptop.jpg')} alt="Usługi informatyczne" />
+            </div>
         </section>
     )
 }
