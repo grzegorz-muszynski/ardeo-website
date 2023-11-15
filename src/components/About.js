@@ -22,9 +22,7 @@ export default function About() {
     // The variable below decides when the animated text stops moving up or down
     if (window.pageYOffset > 1400 || window.innerHeight + window.scrollY < 1240) return;
 
-    // console.log(window.innerHeight + window.pageYOffset)
     setOffsetY(window.innerHeight + window.scrollY);
-    // console.log(window.innerHeight + window.scrollY);
 
     // The line below decides when the animated text shows up
     if (window.innerHeight + window.scrollY > 1300 && counter === 0) {

@@ -8,10 +8,6 @@ import imageAMGlobal from '../assets/projects/amglobal.JPG';
 export default function Projects () {
     const flag = useSelector(state => state.flag);
 
-    // const imageUrl = '../assets/projects/alfa-motors.JPG';
-
-
-
     return (
         <section id="Projects">
             <h1>

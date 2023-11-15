@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { gsap } from "gsap";
+import menuScrolling from "../scripts/menuScrolling";
 import SplitTextJS from 'split-text-js';
 
 // gsap.registerPlugin(SplitText);
@@ -68,8 +69,24 @@ export default function Home () {
                         </span>
                     </div>
                     <div className="__buttons">
-                        <a href="#Header" >{flag.language === "polish" ? "Napisz do nas" : "Hire us"}</a>
-                        <a href="#Portfolio" >{flag.language === "polish" ? "Sprawdź nasze portfolio" : "View our portfolio"}</a>
+                        <a 
+                            onClick={menuScrolling} 
+                            data-height5={2480}
+                            data-height4={440} 
+                            data-height3={720} 
+                            data-height2={720} 
+                            data-height1={720} 
+                            data-height={720}  
+                         >{flag.language === "polish" ? "Napisz do nas" : "Hire us"}</a>
+                        <a
+                            onClick={menuScrolling} 
+                            data-height5={1795}
+                            data-height4={440} 
+                            data-height3={720} 
+                            data-height2={720} 
+                            data-height1={720} 
+                            data-height={720}
+                         >{flag.language === "polish" ? "Sprawdź nasze portfolio" : "View our portfolio"}</a>
                     </div>
                 </div>
                 <img className="__photo" src={require("../assets/home/me.png")} alt="Programiści Kraków" />

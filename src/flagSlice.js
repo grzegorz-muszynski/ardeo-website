@@ -9,7 +9,6 @@ export const flagSlice = createSlice({
     initialState,
     reducers: {
         chooseLanguage: (state, action) => {
-            console.log(state.language);
             state.language = action.payload
         },
     }

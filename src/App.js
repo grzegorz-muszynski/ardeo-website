@@ -29,12 +29,12 @@ import './sass/components/Slider.scss';
 function App() {
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 3650);
-  // }, []);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3650);
+  }, []);
 
   return (
     <Router>
@@ -42,7 +42,7 @@ function App() {
           <Routes>
             <Route exact path='/' element={
               <>
-                {/* {loading && (<Preloader/>)} */}
+                {loading && (<Preloader/>)}
                 <Header/>
                 <Home/>
                 <Slider/>

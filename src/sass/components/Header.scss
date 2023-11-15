@@ -19,6 +19,7 @@
     }
     .Header__menu {
         list-style-type: none;
+        cursor: pointer;
     }
         
     .Header__menu li {
@@ -35,7 +36,7 @@
     }
     
     .Header__flags img {
-        $height: 30px;
+        $height: 28px;
         height: $height;
         width: calc(($height * 8) / 5);
         padding: 0 5px;
@@ -43,3 +44,13 @@
     }
 }
 
+@media(max-width: $threshold2) {
+    #Header {
+        .Header__menu {
+            
+        }
+        .Header__menu li {
+        
+        }
+    }
+}

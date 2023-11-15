@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import menuScrolling from '../scripts/menuScrolling';
 
 export default function Contact () {
     const flag = useSelector(state => state.flag);
     const [imageTop, setImageTop] = useState(0);
 
     const parallaxOnScroll = () => {
-        console.log(window.scrollY);
         if (window.scrollY < 2180 || window.scrollY > 2480) return;
 
         setImageTop(window.scrollY);
@@ -85,7 +85,7 @@ export default function Contact () {
                     className="__img" 
                     src={require('../assets/contact/laptop.jpg')} 
                     alt="Usługi informatyczne"
-                    style={{top: `${ (200 - (imageTop - 2180)*.66) }px`}}
+                    style={{top: `${ (200 - (imageTop - 2180) * .8) }px`}}
                 />
             </div>
         </section>
