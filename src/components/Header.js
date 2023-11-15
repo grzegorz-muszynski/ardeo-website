@@ -18,6 +18,7 @@ export default function About() {
                 $threshold4: 1200px;
                 $threshold5: 1400px;
              */}
+        
             <ul className="Header__menu">
                 {/* Home section */}
                 <li
