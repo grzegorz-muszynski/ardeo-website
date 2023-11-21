@@ -1,0 +1,114 @@
+@import '../helpers/variables.scss';
+
+#Header {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    border-bottom: 2px solid $red-logo;
+    width: 100vw;
+    background-color: $black;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: $header-height;
+    .Header__logo {
+        height: 100px;
+        display: inline-block;
+    }
+    .Header__menu {
+        list-style-type: none;
+        cursor: pointer;
+        padding-inline-start: 20px;
+    }
+    .Header__menu li {
+        font-family: aeonik;
+        font-size: 18px;
+        display: inline-block;
+        padding: 9px;
+    }
+    // Menu btn
+    .Header__menu-btn {
+        display: none;
+    }
+    // Language flags
+    .Header__flags {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 10px;
+    }
+    
+    .Header__menu-flag {
+        $height: 28px;
+        height: $height;
+        width: calc(($height * 8) / 5);
+        padding: 0 5px;
+        cursor: pointer;
+    }
+}
+
+@media(max-width: $threshold2) {
+    #Header {
+        justify-content: space-between;
+        padding-left: 5px;
+        .Header__menu-btn {
+            display: inline-block;
+            cursor: pointer;
+            height: 28px;
+            // display: block;
+            // max-height: 28px;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+        }
+        .Header__menu {
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // // z-index: 5;
+            // width: 100vw;
+            // height: 100vh;
+            position: absolute;
+            top: 115px;
+            left: 0;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            background-color: $black;
+            animation: unfold .5s ease-in;
+            padding: 0;
+        }
+        .Header__menu-hidden {
+            display: none;
+        }
+        .Header__menu li {
+            position:relative;
+            z-index: 2;
+            width: 100%;
+            // padding-left: 35px;
+            &:hover{
+                background-color: $silver;
+                color: $red-logo;
+                color: $black;
+                font-weight: 1000;
+                letter-spacing: .5px;
+            } 
+            // font-size: 32px;
+
+            // position: relative;
+            // z-index: 6;
+            // background-color: red;
+            // z-index: 1;
+            // display: block;
+        }
+    }
+}
+
+@keyframes unfold {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}

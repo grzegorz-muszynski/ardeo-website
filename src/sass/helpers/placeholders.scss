@@ -1,0 +1,22 @@
+@import '../helpers/variables.scss';
+
+// %titles {
+//     text-decoration: underline;
+//     text-underline-offset: 10px;
+//     color: $darkBlue;
+//     font-family: $lato;
+// }
+
+%inputs {
+    background-color: $silver;
+    line-height: 34px;
+    font-size: 22px;
+    // margin: 2px 0;
+    // padding: 0;
+
+    // border-radius: 4px;
+    &::placeholder {
+        color: hsl(0, 0%, 60%);
+        text-indent: 4px;
+    }
+}

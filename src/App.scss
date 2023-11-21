@@ -1,0 +1,20 @@
+@import './sass/helpers/variables.scss';
+
+#App {
+    min-height: 100vh;
+    // background-color: $silver;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 12px $red-lighter;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $red-logo;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: $red-lighter;
+  }

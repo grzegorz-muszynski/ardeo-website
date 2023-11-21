@@ -1,0 +1,149 @@
+@import '../helpers/variables.scss';
+
+#Preloader {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // animation: wrap .8s 1.5s ease-out;
+    animation: wrap .7s calc($animations + 2s) ease-in;
+
+    .__box {      
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .__icon {
+            margin-bottom: 20px;
+            svg {
+                animation: spinLogo $animations linear, pushLogo linear $animations;
+                height: 100px;
+                width: 100px;
+                path {
+                    animation: colorChange $animations;
+                    fill: $red-logo;
+                }
+            }
+        }
+        .__logo {
+            svg {
+                height: 50px;
+                margin-bottom: 10px;
+                path {
+                    color: $red-logo;
+                    animation: show 2.5s;
+                    fill: $red-logo;
+                }
+            }
+        }
+        .__container {
+            overflow: hidden;
+            .__subtitle {
+                font-family: "archivo", sans-serif;
+                font-size: 20px;
+                color: $red-lighter;
+                // color: white;
+                letter-spacing: 0.08em;
+                display: inline-block;
+                // transform: translateY(50px);
+
+                &:nth-of-type(odd) {
+                    animation: slipIn $animations ease-out;
+                    // animation: textChange 2.5s, slipIn $animations ease-out;
+                }
+                &:nth-of-type(even) {
+                    animation: slipIn $animations ease-out 350ms, hide 501ms;
+                    // animation: textChange 2.5s, slipIn $animations ease-out 500ms, hide 501ms;
+                    padding-left: 3px;
+                }
+            }
+        }
+    }
+}
+
+// Animations
+@keyframes spinLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pushLogo {
+    0% {
+        // transform: translateZ(200px);
+        height: 250px;
+        width: 250px;
+        opacity: 0.5;
+    }
+    100% {
+        // transform: translateZ(0);
+        height: 100px;
+        width: 100px;
+        opacity: 1;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        fill: $white;
+    }
+    100% {
+        fill: $red-logo;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes textChange {
+    0% {
+        color: $white;
+    }
+    100% {
+        color: $red-lighter;
+    }
+}
+
+@keyframes slipIn {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+// Due to delay in the other animation, this one hides temporarly
+@keyframes hide {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes wrap {
+    0% {
+        transform: translateY(0);
+    }
+    // 10% {
+    //     transform: translateY(10%);
+    // }
+    100% {
+        transform: translateY(-200%);
+    }
+}

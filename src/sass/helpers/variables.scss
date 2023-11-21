@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "archivo";
+    src: url('../../assets/fonts/Archivo-Regular.ttf');
+    // src: url('../../assets/fonts/Archivo_ExtraLight200Italic.ttf');
+}
+@font-face {
+    font-family: "aeonik";
+    src: url('../../assets/fonts/Aeonik-Pro-Light.ttf');
+}
+@font-face {
+    font-family: roboto;
+    // src: url('../../assets/fonts/Roboto-Regular.ttf');
+    src: url('../../assets/fonts/Roboto-Light.ttf');
+}
+@font-face {
+    font-family: "geom";
+    // font-family: "Geom Graphic W03 Regular";
+    src: url("https://db.onlinewebfonts.com/t/b0b8a10e9c97391e66297c8b5398984f.eot");
+    src: url("https://db.onlinewebfonts.com/t/b0b8a10e9c97391e66297c8b5398984f.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b0b8a10e9c97391e66297c8b5398984f.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b0b8a10e9c97391e66297c8b5398984f.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b0b8a10e9c97391e66297c8b5398984f.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b0b8a10e9c97391e66297c8b5398984f.svg#Geom Graphic W03 Regular")format("svg");
+}
+
+// *{border: 1px solid red;}
+
+// Colors
+$silver: rgb(211,211,211);
+$black: #19161A;
+$white: hsl(0, 0%, 90%);
+$red-logo: #FF4057;
+$red-lighter: hsl(353, 100%, 70%);
+
+// Animation time
+$animations: 1s;
+
+// Slider's parameters
+$icon-width: 200px;
+$slider-height: 150px;
+
+// Header's height
+$header-height: 130px;
+
+// "Projects" section's variables
+
+
+// Parameters of form's text area and button 
+$textarea__button-width: 100px;
+// $textbox-width: 100%;
+
+// Media
+$threshold1: 576px;
+$threshold2: 768px;
+$threshold3: 992px;
+$threshold4: 1200px;
+$threshold5: 1400px;
+
+*{border: 1px solid red}

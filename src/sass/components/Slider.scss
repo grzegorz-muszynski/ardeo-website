@@ -1,0 +1,53 @@
+@import '../helpers/variables.scss';
+
+#Slider {
+    // height: 250px;
+    // height: $slider-height;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    // width: 90%;
+    border-top: 8px solid $red-logo;
+    border-bottom: 8px solid $red-logo;
+    background-color: white;
+    width: 100%;
+    display: grid;
+    place-items: center;  
+    overflow: hidden; 
+    .__track {
+        display: flex;
+        cursor: pointer;
+        width: calc($icon-width * 32);
+        animation: scroll 16s linear infinite;
+        &:hover {
+            animation-play-state: paused;
+        }
+        .__icon {
+            height: 150px;
+            // width: 250px;
+            width: $icon-width;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // padding: 15px;
+            perspective: 100px; // Necessary for moving element on Z axis
+            img {
+                max-height: 60%;
+                max-width: 80%;
+                transition: transform 1s;
+                &:hover {
+                    transform: translateZ(20px);
+                }
+            }
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-1 * $icon-width * 16));
+    }
+}
