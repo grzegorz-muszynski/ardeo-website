@@ -2,13 +2,13 @@
 
 #Home {
     background-color: $black;
-    height: 620px; // temporary
+    height: $home-height; // temporary
     margin-top: $header-height;
     .__container {
         color: $white;
         display: flex;
         justify-content: space-between;
-        height: 620px;
+        height: $home-height;
         width: 750px;
         margin: 0 auto;
         
@@ -16,21 +16,21 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            padding: 120px 0;
+            padding: 160px 0;
             // justify-content: center;
             .__title {
+                height: 2em;
                 font-family: aeonik;
                 font-size: 40px;
                 font-weight: 100;
                 letter-spacing: -0.05em;
             }
             .__show {
-                width: 380px;
+                // width: 380px;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 .__beginning {
-                    // font-size: 2em;
                     font-size: 20px;
                     text-align: center;
                     padding-right: 6px;
@@ -38,7 +38,6 @@
                 // Changing text of introduction
                 .__wrapper {
                     p {
-                        // font-size: 2em;
                         font-size: 20px;
                         // text-align: center;
                         text-align: left;
@@ -51,7 +50,7 @@
                 }
             }
             .__buttons {
-                margin-top: 70px;
+                margin-top: 60px;
                 a {
                     cursor: pointer;
                     text-decoration: none;
@@ -78,21 +77,71 @@
             }
         }
         .__photo {
-            height: 620px;
+            height: $home-height;
             object-fit: cover;
             display: inline-block;
         }    
     }
 }
 
+@media(max-width: $threshold3) {
+    .__container {
+        box-sizing: border-box;
+        padding: 0 40px;
+    }
+}
+
 @media(max-width: $threshold2) {
     #Home {
+        height: $home-height-threshold3;
         .__container {
+            height: $home-height-threshold3;
             justify-content: space-around;
-
+            width: 100%;
+            .__info {
+                padding: 80px 0 130px;
+            }
             // width: 100%;
             .__photo {
                 display: none;
+            }
+        }
+    }
+}
+
+@media(max-width: $threshold1) {
+    #Home {
+        height: $home-height;
+        .__container {
+            height: $home-height;
+            justify-content: space-around;
+            width: 300px;
+            padding: 0;
+            .__info {
+                padding: 170px 0 110px;
+                .__title {
+                    font-size: 28px;
+                    // text-align: center;
+                }
+                .__show {
+                    .__beginning {
+                        font-size: 16px;
+                    }
+                    .__wrapper {
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .__buttons {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    align-items: start;
+                    justify-content: space-between;
+                    margin-top: 40px;
+                    height: 100px;
+                }
             }
         }
     }
