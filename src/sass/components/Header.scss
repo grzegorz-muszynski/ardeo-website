@@ -5,13 +5,13 @@
     z-index: 4;
     top: 0;
     border-bottom: 2px solid $red-logo;
+    height: $header-height;
     width: 100vw;
     background-color: $black;
     color: $white;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: $header-height;
     .Header__logo {
         height: 100px;
         display: inline-block;
@@ -50,7 +50,8 @@
 @media(max-width: $threshold2) {
     #Header {
         justify-content: space-between;
-        padding-left: 5px;
+        box-sizing: border-box;
+        padding: 20px;
         .Header__menu-btn {
             display: inline-block;
             cursor: pointer;
@@ -62,12 +63,6 @@
             // left: 0;
         }
         .Header__menu {
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // // z-index: 5;
-            // width: 100vw;
-            // height: 100vh;
             position: absolute;
             top: 115px;
             left: 0;
@@ -93,14 +88,19 @@
                 font-weight: 1000;
                 letter-spacing: .5px;
             } 
-            // font-size: 32px;
-
-            // position: relative;
-            // z-index: 6;
-            // background-color: red;
-            // z-index: 1;
-            // display: block;
         }
+    }
+}
+
+@media (max-width: $threshold1) {
+    #Header {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 240px;
+        .Header__menu {
+            // position: absolute;
+            top: 225px;
+        }    
     }
 }
 

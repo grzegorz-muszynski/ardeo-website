@@ -15,7 +15,9 @@
         .__info {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-around;
+            padding: 120px 0;
+            // justify-content: center;
             .__title {
                 font-family: aeonik;
                 font-size: 40px;
@@ -83,3 +85,15 @@
     }
 }
 
+@media(max-width: $threshold2) {
+    #Home {
+        .__container {
+            justify-content: space-around;
+
+            // width: 100%;
+            .__photo {
+                display: none;
+            }
+        }
+    }
+}
