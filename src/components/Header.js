@@ -18,6 +18,11 @@ export default function About() {
         setShowNavbar(!showNavbar);
     }
 
+    const scrollAndClose = (e) => {
+        menuScrolling(e);
+        handleClosing();
+    }
+
     return (
         <section id='Header'>
             <img className="Header__logo" src={logo} alt="Tworzenie stron internetowych" />
@@ -38,7 +43,7 @@ export default function About() {
             >
                 {/* Home section */}
                 <li
-                    onClick={menuScrolling} 
+                    onClick={scrollAndClose} 
                     data-height5={0}
                     data-height4={440} 
                     data-height3={720} 
@@ -49,7 +54,7 @@ export default function About() {
 
                 {/* About section */}
                 <li
-                    onClick={menuScrolling} 
+                    onClick={scrollAndClose} 
                     data-height5={790}
                     data-height4={440} 
                     data-height3={720} 
@@ -60,7 +65,7 @@ export default function About() {
                 
                 {/* Portfolio section */}
                 <li
-                    onClick={menuScrolling} 
+                    onClick={scrollAndClose} 
                     data-height5={1795}
                     data-height4={440} 
                     data-height3={720} 
@@ -71,7 +76,7 @@ export default function About() {
                 
                 {/* Contact section */}
                 <li
-                    onClick={menuScrolling} 
+                    onClick={scrollAndClose} 
                     data-height5={2480}
                     data-height4={440} 
                     data-height3={720} 
