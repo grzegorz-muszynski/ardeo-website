@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
-import Card from "./Card";
-import imageAlfaMotors from '../assets/projects/alfa-motors.JPG';
-import imageOdnowa from '../assets/projects/odnowa.JPG';
-import imageMedicalVita from '../assets/projects/medical-vita.JPG';
-import imageAMGlobal from '../assets/projects/amglobal.JPG';
+import Card from "./Card/Card";
+import imageAlfaMotors from '../../assets/projects/alfa-motors.JPG';
+import imageOdnowa from '../../assets/projects/odnowa.JPG';
+import imageMedicalVita from '../../assets/projects/medical-vita.JPG';
+import imageAMGlobal from '../../assets/projects/amglobal.JPG';
 
 export default function Projects () {
     const flag = useSelector(state => state.flag);
@@ -22,10 +22,6 @@ export default function Projects () {
                     title="Alfa Motors"
                     alt="Aplikacje webowe"
                     href="https://alfamotors.pl/"
-                    // desc={flag.language === "polish" ?
-                    //     "Zaufali nam" 
-                    //     : 
-                    //     "Our clients"}
                 />
                 <Card 
                     imgSrc={imageOdnowa}

@@ -1,19 +1,17 @@
-@import '../helpers/variables.scss';
+@import '../../helpers/variables.scss';
 
 #Projects {
     height: 600px;
     padding: 48px 0;
     background-color: $black;
-    // border-top: 1px solid $red-logo;
     border-bottom: 1px solid $red-logo;
-    justify-content: space-around;
+    // display: flex;
+    justify-content: space-evenly;
     h1 {
         font-family: roboto;
         font-size: 40px;
-        // text-decoration: underline solid $red-logo 1px;
         text-decoration: underline solid $silver 1px;
         text-underline-offset: 8px;   
-        // color: $silver;
         color: $red-logo;
         display: block;
         text-align: center;
@@ -22,7 +20,16 @@
     }
     .__cards {
         display: flex;
-        // justify-content: center;
         justify-content: space-evenly;
     }
+}
+
+@media (max-width: $threshold5) {
+    #Projects {
+        height: 1300px;
+        .__cards {
+            justify-content: center;
+        }
+    }
+
 }

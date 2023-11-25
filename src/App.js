@@ -10,19 +10,19 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './components/Home';
 import Preloader from './components/Preloader';
-import Projects from './components/Projects';
+import Projects from './components/Projects/Projects';
 import Slider from './components/Slider';
 // import ThanksPol from './components/ThanksPol';
 // import ThanksEng from './components/ThanksEng';
 
 import './sass/components/About.scss';
-import './sass/components/Card.scss';
+import './sass/components/Projects/Card/Card.scss';
 import './sass/components/Contact.scss';
 import './sass/components/Footer.scss';
 import './sass/components/Header.scss';
 import './sass/components/Home.scss';
 import './sass/components/Preloader.scss';
-import './sass/components/Projects.scss';
+import './sass/components/Projects/Projects.scss';
 import './sass/components/Slider.scss';
 // import './sass/components/Thanks.scss';
 
