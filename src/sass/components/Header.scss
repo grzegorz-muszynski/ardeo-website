@@ -84,10 +84,12 @@
         }
         .Header__icons {
             width: 90px;
-            justify-content: space-between;
+            // justify-content: ;
             padding-right: 10px;
+            // Button responsible for showing nav menu 
             .Header__icons__menu {
                 position: relative;
+                top: -6px;
                 height: 40px;
                 width: 40px;
                 border: 1px solid red;
@@ -116,13 +118,12 @@
                     }
                 }
             }
+            // Changes for transformed button
             .Header__icons__menu-active {
                 span {
                     &:nth-child(1) {
-                        // transform: translateY(-10px);
                         width: 30px;
                         transform: translateY(0px) rotate(-45deg);
-                        // right: 5px;
                     }
                     &:nth-child(2) {
                         transform: translateX(60px);
