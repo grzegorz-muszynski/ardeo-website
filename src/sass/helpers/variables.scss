@@ -39,7 +39,8 @@ $slider-height: 150px;
 
 // Header's height
 $header-height: 130px;
-// $header-flag-height: 28px;
+$header-button-width: 40px;
+$header-button-width-2: 20px;
 // $header-flag-height-2: 20px;
 
 // "Projects" section's variables
@@ -47,6 +48,7 @@ $header-height: 130px;
 // Home 
 $home-height: 620px;
 $home-height-threshold3: 500px;
+$home-height-threshold1: 500px;
 
 // Parameters of form's text area and button 
 $textarea__button-width: 100px;

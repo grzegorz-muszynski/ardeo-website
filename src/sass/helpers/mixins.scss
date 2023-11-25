@@ -1,0 +1,53 @@
+@import '../helpers/variables.scss';
+
+// Used in Header section
+@mixin proportions($width) {
+    // Button responsible for showing nav menu 
+    .Header__icons__menu {
+        position: relative;
+        top: -6px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        overflow: hidden;
+
+        height: $width;
+        width: $width;
+        // Animated lines
+        span {
+            position: absolute;
+            background-color: $red-logo;
+            border-radius: calc($width / 20);
+            transition: 0.5s;
+            height: calc($width / 20);
+            width: calc($width / 4 * 3);
+            &:nth-child(1) {
+                transform: translateY(calc($width / -4));
+                width: calc($width / 2);
+                right: calc($width / 8);
+            }
+            &:nth-child(3) {
+                transform: translateY(calc($width / 4));
+                width: calc($width / 4);
+                right: calc($width / 8);
+            }
+        }
+    }
+    // Changes for transformed button
+    .Header__icons__menu-active {
+        span {
+            &:nth-child(1) {
+                width: calc($width * 3 / 4);
+                transform: translateY(0px) rotate(-45deg);
+            }
+            &:nth-child(2) {
+                transform: translateX(calc($width * 1.5));
+            }
+            &:nth-child(3) {
+                width: calc($width * 3 / 4);
+                transform: translateY(0px) rotate(-315deg);
+            }
+        }
+    }   
+}

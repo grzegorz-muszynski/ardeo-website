@@ -57,11 +57,11 @@ export default function About() {
   }, [flag.language, counter]);
 
   return (
-    // Don't know why - background size must be declared inline, if in CSS - browser changes cover for auto
+    // Background size must be declared inline, if in CSS - browser changes cover for auto
     <section id="About">
         <div 
           className="__box"
-          style={{ transform: `translateY(${ (offsetY - 1200) * 0.6 }px)`}}
+          style={{ transform: `translateY(${ (offsetY - 1200) * 0.55 }px)`}}
           // style={{ transform: `translateY(${offsetY}px)`}}
         >
           <div className="__text" style={isHidden ? {display: "none"} : {display: "block"}}>

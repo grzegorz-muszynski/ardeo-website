@@ -110,14 +110,14 @@
 
 @media(max-width: $threshold1) {
     #Home {
-        height: $home-height;
+        height: $home-height-threshold1;
         .__container {
-            height: $home-height;
+            height: $home-height-threshold1;
             justify-content: space-around;
             width: 300px;
             padding: 0;
             .__info {
-                padding: 170px 0 110px;
+                padding: 90px 0 140px;
                 .__title {
                     font-size: 28px;
                     // text-align: center;

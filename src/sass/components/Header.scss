@@ -1,3 +1,4 @@
+@import '../helpers/mixins.scss';
 @import '../helpers/variables.scss';
 
 #Header {
@@ -57,84 +58,38 @@
         padding: 20px;
         .Header__menu {
             position: absolute;
+            z-index: -52;
             top: 115px;
             left: 0;
             width: 100vw;
             display: flex;
             flex-direction: column;
             background-color: $black;
-            animation: unfold .5s ease-in;
             padding: 0;
+            li {
+                position: relative;
+                width: 100%;
+                border-bottom: 0.1px solid $red-logo;
+                &:hover{
+                    background-color: $silver;
+                    color: $red-logo;
+                    color: $black;
+                    font-weight: 1000;
+                    letter-spacing: .5px;
+                } 
+            }
         }
         .Header__menu-hidden {
             display: none;
         }
-        .Header__menu li {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            // padding-left: 35px;
-            &:hover{
-                background-color: $silver;
-                color: $red-logo;
-                color: $black;
-                font-weight: 1000;
-                letter-spacing: .5px;
-            } 
-        }
+//         .Header__menu-shown {
+// //
+//         }
         .Header__icons {
             width: 90px;
-            // justify-content: ;
             padding-right: 10px;
-            // Button responsible for showing nav menu 
-            .Header__icons__menu {
-                position: relative;
-                top: -6px;
-                height: 40px;
-                width: 40px;
-                border: 1px solid red;
-                cursor: pointer;
-                display: flex;
-                justify-content: center;
-                align-items: center; 
-                overflow: hidden;   
-                // Animated lines
-                span {
-                    position: absolute;
-                    width: 30px;
-                    height: 4px;
-                    background-color: $red-logo;
-                    border-radius: 2px;
-                    transition: 0.5s;
-                    &:nth-child(1) {
-                        transform: translateY(-10px);
-                        width: 20px;
-                        right: 5px;
-                    }
-                    &:nth-child(3) {
-                        transform: translateY(10px);
-                        width: 10px;
-                        right: 5px;
-                    }
-                }
-            }
-            // Changes for transformed button
-            .Header__icons__menu-active {
-                span {
-                    &:nth-child(1) {
-                        width: 30px;
-                        transform: translateY(0px) rotate(-45deg);
-                    }
-                    &:nth-child(2) {
-                        transform: translateX(60px);
-                    }
-                    &:nth-child(3) {
-                        width: 30px;
-                        transform: translateY(0px) rotate(-315deg);
-                    }
-                }
-                
-            }   
+                        // mixin with all menu's button styling
+            @include proportions($width: 40px);
         }
     }
 }
@@ -152,25 +107,15 @@
             top: 225px;
         }    
         .Header__icons {
+            width: 65px;
             padding: 0;
             $height: 20px;
             .Header__icons__flag {
                 height: $height;
                 width: calc($height * 8 / 5);
             }
-            .Header__icons__menu {
-                height: $height;
-                
-            }
+            // mixin with all menu's button styling
+            @include proportions($width: 30px);
         }
-    }
-}
-
-@keyframes unfold {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0%);
     }
 }

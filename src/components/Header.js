@@ -39,7 +39,7 @@ export default function About() {
         
             <ul 
                 className={showNavbar ? 
-                "Header__menu" : 
+                "Header__menu Header__menu-shown" : 
                 "Header__menu Header__menu-hidden"}
                 // onClick={handleClosing}
             >
