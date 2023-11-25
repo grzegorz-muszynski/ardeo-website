@@ -18,8 +18,11 @@
     }
     .Header__menu {
         list-style-type: none;
-        cursor: pointer;
         padding-inline-start: 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        width: 310px;
     }
     .Header__menu li {
         font-family: aeonik;
@@ -28,23 +31,24 @@
         padding: 9px;
     }
     // Menu btn
-    .Header__menu-btn {
+    .Header__icons-menu {
         display: none;
     }
     // Language flags
-    .Header__flags {
+    .Header__icons {
         display: flex;
-        justify-content: space-between;
-        padding-right: 10px;
+        // justify-content: 
+        width: 60px;
+        // padding-right: 10px; 
+        .Header__icons-flag {
+            // $height: $header-flag-height;
+            $height: 28px;
+            height: $height;
+            width: calc($height * 8 / 5);
+            cursor: pointer;
+        }
     }
     
-    .Header__menu-flag {
-        $height: 28px;
-        height: $height;
-        width: calc(($height * 8) / 5);
-        padding: 0 5px;
-        cursor: pointer;
-    }
 }
 
 @media(max-width: $threshold2) {
@@ -52,15 +56,10 @@
         justify-content: space-between;
         box-sizing: border-box;
         padding: 20px;
-        .Header__menu-btn {
+        .Header__icons-menu {
             display: inline-block;
             cursor: pointer;
             height: 28px;
-            // display: block;
-            // max-height: 28px;
-            // position: absolute;
-            // top: 0;
-            // left: 0;
         }
         .Header__menu {
             position: absolute;
@@ -77,7 +76,7 @@
             display: none;
         }
         .Header__menu li {
-            position:relative;
+            position: relative;
             z-index: 2;
             width: 100%;
             // padding-left: 35px;
@@ -89,18 +88,38 @@
                 letter-spacing: .5px;
             } 
         }
+        .Header__icons {
+            width: 90px;
+            justify-content: space-between;
+            padding-right: 10px;
+        }
     }
 }
 
 @media (max-width: $threshold1) {
     #Header {
         flex-direction: column;
-        justify-content: space-around;
-        height: 240px;
+        justify-content: space-evenly;
+        height: 140px;
+        padding: 0;
+        .Header__logo {
+            height: 80px;
+        }
         .Header__menu {
-            // position: absolute;
             top: 225px;
         }    
+        .Header__icons {
+            padding: 0;
+            $height: 20px;
+            .Header__icons-flag {
+                height: $height;
+                width: calc($height * 8 / 5);
+            }
+            .Header__icons-menu {
+                height: $height;
+                
+            }
+        }
     }
 }
 

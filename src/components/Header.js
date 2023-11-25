@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { chooseLanguage } from '../flagSlice';
 import menuScrolling from '../scripts/menuScrolling';
-import menuBtn from '../assets/header/menu-btn.webp';
+import flagPol from '../assets/header/flags/flagPL.gif';
+import flagEng from '../assets/header/flags/flagUK.gif';
+// import menuBtn from '../assets/header/menu-btn.webp';
 import logo from '../assets/logo/colourful.png';
 
 export default function About() {
@@ -86,24 +88,25 @@ export default function About() {
                 >{flag.language === "polish" ? "Kontakt" : "Contact"}</li>
             </ul>
 
-            <span className="Header__flags">
-                <img 
+            <span className="Header__icons">
+                {/* <img 
                     src={menuBtn} 
                     alt="Websites Kraków" 
-                    className="Header__menu-btn"
+                    className="Header__icons-menu"
                     onClick={toggleNavbar}
-                />
-                        
+                /> */}
+                <div className="Header__icons-menu">
+                    
+                </div>
+
+
+
                 <img 
-                    src={require("../assets/header/flags/flagPL.gif")} 
+                    src={flag.language === "english" ? flagPol : flagEng}
+                    // {require("../assets/header/flags/flagPL.gif")} 
                     alt="Strony internetowe Polska" 
-                    className="Header__menu-flag"
-                    onClick={() => dispatch(chooseLanguage('polish'))}
-                />    
-                <img 
-                    src={require("../assets/header/flags/flagUK.gif")} alt="Websites Europe" 
-                    className="Header__menu-flag"
-                    onClick={() => dispatch(chooseLanguage('english'))}
+                    className="Header__icons-flag"
+                    onClick={() => dispatch(chooseLanguage(flag.language === 'english' ? 'polish' : 'english'))}
                 />    
             </span>
         </section>
