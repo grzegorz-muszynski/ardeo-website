@@ -22,6 +22,7 @@ export default function About() {
     // The variable below decides when the animated text stops moving up or down
     if (window.pageYOffset > 1400 || window.innerHeight + window.scrollY < 1240) return;
 
+    // Setting offset for the text box
     setOffsetY(window.innerHeight + window.scrollY);
 
     // The line below decides when the animated text shows up
@@ -61,7 +62,11 @@ export default function About() {
     <section id="About">
         <div 
           className="__box"
-          style={{ transform: `translateY(${ (offsetY - 1200) * 0.55 }px)`}}
+          style={window.innerWidth >= 576 ? 
+            { transform: `translateY(${ (offsetY - 1200) * 0.55 }px)`}
+            :
+            { transform: `translateY(${ (offsetY - 1200) * 0.65 }px)`}
+          }
           // style={{ transform: `translateY(${offsetY}px)`}}
         >
           <div className="__text" style={isHidden ? {display: "none"} : {display: "block"}}>
@@ -72,10 +77,6 @@ export default function About() {
               </p>
           </div>     
         </div>
-
-        {/* <div className="__wallpaper2" style={{
-          backgroundSize: "cover", 
-        }}></div> */}
 
         <div className="__wallpaper1" style={{
           backgroundSize: "cover", 
