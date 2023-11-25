@@ -95,17 +95,23 @@ export default function About() {
                     className="Header__icons-menu"
                     onClick={toggleNavbar}
                 /> */}
-                <div className="Header__icons-menu">
-                    
+                <div 
+                    className={showNavbar ? 
+                        "Header__icons__menu Header__icons__menu-active" : 
+                        "Header__icons__menu"
+                    }
+                    onClick={toggleNavbar}
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-
-
 
                 <img 
                     src={flag.language === "english" ? flagPol : flagEng}
                     // {require("../assets/header/flags/flagPL.gif")} 
                     alt="Strony internetowe Polska" 
-                    className="Header__icons-flag"
+                    className="Header__icons__flag"
                     onClick={() => dispatch(chooseLanguage(flag.language === 'english' ? 'polish' : 'english'))}
                 />    
             </span>
