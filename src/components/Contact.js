@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import laptopImg from '../assets/contact/laptop.jpg';
 import menuScrolling from '../scripts/menuScrolling';
 
 export default function Contact () {
@@ -83,9 +84,14 @@ export default function Contact () {
             <div className="__background">
                 <img 
                     className="__img" 
-                    src={require('../assets/contact/laptop.jpg')} 
+                    src={laptopImg} 
                     alt="Usługi informatyczne"
-                    style={{top: `${ (200 - (imageTop - 2180) * .8) }px`}}
+                    // style={{top: `${ (200 - (imageTop - 2180) * .8) }px`}}
+                    style={window.innerWidth >= 1200 ? 
+                        {top: `${ (200 - (imageTop - 2180) * .8) }px`}
+                        :
+                        {top: '0px'}
+                     }
                 />
             </div>
         </section>

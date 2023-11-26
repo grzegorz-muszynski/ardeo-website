@@ -1,8 +1,8 @@
 @import '../helpers/variables.scss';
 @import '../helpers/placeholders.scss';
 
-
 #Contact {
+    position: relative;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -11,16 +11,17 @@
     // Laptop's picture
     .__background {
         position: relative;
+        box-sizing: border-box;
         width: 50%;
         max-width: 800px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         img {
-            position: relative;
-            // z-index: -1;
-            // top: 350px;
             width: 100%;
+            box-sizing: border-box;
+            position: relative;
             object-fit: cover;
         }
     }
@@ -29,17 +30,14 @@
     .__container {
         box-sizing: border-box;
         width: 50%;
+        padding-left: 20px;
         .__infobox {
             width: 560px;
             position: relative;
             margin: 20px auto;
             .__title {
-                background-color: $silver;
-                font-family: aeonik; 
-                font-size: 35px;
-                color: $silver;
+                @extend %titles;
                 background-color: black;
-                // font-family: roboto;
             }
             .__desc {
                 color: $silver;
@@ -47,6 +45,7 @@
                 font-size: 18px;
                 background-color: black;
             }
+
             // Box with e-mail and phone number
             .__info {
                 width: 350px;
@@ -72,6 +71,7 @@
                     }
                 }
             }
+
             // Submit form
             form {
                 width: 500px;
@@ -81,7 +81,7 @@
                     input {
                         color: $silver;
                         // color: hsl(0, 0%, 60%);
-                        background-color: black;
+                        background-color: hsl(0, 0%, 0%);
                         width: 430px;
                         margin-bottom: 20px;
                         border-top: none;
@@ -94,21 +94,15 @@
                             // color: $red-logo;
                         }
                     }
-                    input:nth-of-type(odd) {
-                        // background-color: black;
-                    }
-                    input:nth-of-type(even) {
-                        // background-color: black;  
-                    }
                 }
                 textarea {
                     background-color: black;
                     color: $silver;
-                    // color: hsl(0, 0%, 60%);
-                    border: 1px solid $silver;
-                    padding: 0;
-                    border-radius: 20px;
+                    box-sizing: border-box;
                     width: 100%;
+                    border: 1px solid $silver;
+                    padding: 8px;
+                    border-radius: 20px;
                     
                     @extend %inputs;
                 }
@@ -132,4 +126,130 @@
             }
         }
     }
+}
+
+@media (max-width: $threshold4) {
+    #Contact {
+        height: 1000px;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        // Laptop's image
+        .__background {
+            position: absolute;
+            width: 100%;
+            box-sizing: border-box;
+            max-width: none;
+            opacity: 0.2;
+            overflow: hidden;
+            justify-content: end;
+            img {
+                position: relative;
+                width: 100%;
+            }
+        }
+        // Information
+        .__container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);              
+            z-index: 1;
+            padding: 0;
+            width: 100%;
+            .__infobox {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .__title {
+                    width: 100%;
+                    text-align: center;
+                }
+                .__desc {
+                    width: 100%;
+                    text-align: center;
+                }
+                // Submit form
+                form {
+                    .__inputs {
+                        display: flex;
+                        align-items: center;
+                        input {
+                            background-color: transparent;
+                        }
+                    }
+                    textarea {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: $threshold1) {
+    #Contact {
+    
+        // Laptop's picture
+        .__background {
+
+            img {
+
+            }
+        }
+    
+        // Container with all information
+        .__container {
+            .__infobox {
+                width: 300px;
+                .__title {
+                    width: 100%;
+                    text-align: center;
+                }
+                .__desc {
+                    width: 100%;
+                    text-align: center;
+                }
+                .__info {
+                    width: 250px;
+                    padding-left: 15px;
+                    margin: 30px;
+                    border: 4px double $silver; 
+                    // display
+                    .__phone-number,
+                    .__email {
+                        // display: flex;
+                        // align-items: center;
+                        // justify-content: flex-start;
+                        img {
+                            height: 20px;
+                        }
+                        p {
+                            // margin: 15px;
+                            font-size: 18px;
+                            line-height: 22px;
+                            // color: $red-logo;
+                            padding-left: 4px;
+                        }
+                    }
+                }
+                // Submit form
+                form {
+                    .__inputs {
+                        display: flex;
+                        align-items: center;
+                        input {
+                            background-color: transparent;
+                        }
+                    }
+                    textarea {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+
 }
