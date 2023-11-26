@@ -1,36 +1,37 @@
 @import '../../../helpers/variables.scss';
 
 .Card {
+    // Position of those components is declared in Projects.scss
+    box-sizing: border-box;
     height: 400px;
     width: 300px;
     color: $silver;
     .__frame {
-        cursor: pointer;
+        box-sizing: border-box;
         display: block;
         height: 75%;
         overflow: hidden;
+        cursor: pointer;
         .__container {
-            // max-height: 60%;
             height: 100%;
             width: 100%;
             perspective: 100px;
+            padding: 0;
             :hover {
                 transform: translateZ(30px);
                 transition: transform 1s;
             }
             img {
+                object-fit: cover;
                 height: 100%;
                 width: 100%;
-                object-fit: cover;
-                object-position: center;
+                // object-position: center;
             }
         }
     }
     h2 {
         text-align: center;
-        // font-family: roboto;
         font-family: aeonik;
-        // font-family: archivo;
         font-size: 30px;
         text-decoration: underline solid $red-logo 1px;
         text-underline-offset: 8px;    

@@ -1,8 +1,4 @@
-
-
 export default function Card (props) {
-    // const { imgSrc } = props;
-    // const photo = props.imgSrc;
 
     return (
         <div className="Card">
@@ -15,7 +11,6 @@ export default function Card (props) {
                 </div>
             </a>
             <h2>{props.title}</h2>
-            {/* <p>{props.desc}</p> */}
         </div>
     )
 }
