@@ -59,7 +59,7 @@
         .Header__menu {
             position: absolute;
             z-index: -52;
-            top: 115px;
+            top: 114px;
             left: 0;
             width: 100vw;
             display: flex;
@@ -101,12 +101,14 @@
             height: 80px;
         }
         .Header__menu {
-            top: 225px;
+            top: 123px;
         }    
         .Header__icons {
             width: 65px;
             padding: 0;
             $height: 20px;
+            display: flex;
+            justify-content: space-between;
             .Header__icons__flag {
                 height: $height;
                 width: calc($height * 8 / 5);

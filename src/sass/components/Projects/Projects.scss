@@ -5,6 +5,7 @@
     height: 600px;
     padding: 48px 0;
     background-color: $black;
+    border-top: 1px solid $red-logo;
     border-bottom: 1px solid $red-logo;
     h1 {
         @extend %titles; 

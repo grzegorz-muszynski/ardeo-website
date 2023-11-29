@@ -28,14 +28,6 @@ export default function About() {
     return (
         <section id='Header'>
             <img className="Header__logo" src={logo} alt="Tworzenie stron internetowych" />
-
-            {/* data-height according to thresholds set in the variables.scss file:
-                $threshold1: 576px;
-                $threshold2: 768px;
-                $threshold3: 992px;
-                $threshold4: 1200px;
-                $threshold5: 1400px;
-             */}
         
             <ul 
                 className={showNavbar ? 
@@ -46,45 +38,25 @@ export default function About() {
                 {/* Home section */}
                 <li
                     onClick={scrollAndClose} 
-                    data-height5={0}
-                    data-height4={440} 
-                    data-height3={720} 
-                    data-height2={720} 
-                    data-height1={720} 
-                    data-height={720}
+                    data-height={'Home'}
                 >{flag.language === "polish" ? "Start" : "Home"}</li>
 
                 {/* About section */}
                 <li
                     onClick={scrollAndClose} 
-                    data-height5={790}
-                    data-height4={440} 
-                    data-height3={720} 
-                    data-height2={720} 
-                    data-height1={720} 
-                    data-height={1000} 
+                    data-height={'About'}
                 >{flag.language === "polish" ? "O nas" : "About"}</li>
                 
                 {/* Portfolio section */}
                 <li
                     onClick={scrollAndClose} 
-                    data-height5={1795}
-                    data-height4={440} 
-                    data-height3={720} 
-                    data-height2={720} 
-                    data-height1={720} 
-                    data-height={1500} 
+                    data-height={'Projects'}
                 >{flag.language === "polish" ? "Portfolio" : "Projects"}</li>
                 
                 {/* Contact section */}
                 <li
                     onClick={scrollAndClose} 
-                    data-height5={2480}
-                    data-height4={440} 
-                    data-height3={720} 
-                    data-height2={200} 
-                    data-height1={2000} 
-                    data-height={2000}                
+                    data-height={'Contact'}               
                 >{flag.language === "polish" ? "Kontakt" : "Contact"}</li>
             </ul>
 

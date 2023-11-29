@@ -14,6 +14,14 @@ export default function Home () {
     const tl = gsap.timeline({ repeat: -1 });
     const [start, setStart] = useState(false);
 
+    const scrollToSection = (sectionId) => {
+        let section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+        //   window.scrollBy(0, -50);
+        }
+      };
+
     useEffect(() => {
         setTimeout(() => {
             setStart(true);
@@ -70,22 +78,12 @@ export default function Home () {
                     </div>
                     <div className="__buttons">
                         <a 
-                            onClick={menuScrolling} 
-                            data-height5={2480}
-                            data-height4={440} 
-                            data-height3={720} 
-                            data-height2={720} 
-                            data-height1={720} 
-                            data-height={720}  
-                         >{flag.language === "polish" ? "Napisz do nas" : "Hire us"}</a>
+                            onClick={() => scrollToSection('Contact')}
+                            data-height={'Contact'}
+                            >{flag.language === "polish" ? "Napisz do nas" : "Hire us"}</a>
                         <a
-                            onClick={menuScrolling} 
-                            data-height5={1795}
-                            data-height4={440} 
-                            data-height3={720} 
-                            data-height2={720} 
-                            data-height1={720} 
-                            data-height={720}
+                            onClick={menuScrolling}
+                            data-height={'Projects'}
                          >{flag.language === "polish" ? "Sprawdź nasze portfolio" : "View our portfolio"}</a>
                     </div>
                 </div>
