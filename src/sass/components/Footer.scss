@@ -12,3 +12,12 @@
         text-align: center;
     }
 }
+
+@media (max-width: $threshold1) {
+    #Footer {
+        height: 51px;
+        p {
+            font-size: 13px;
+        }
+    }
+}

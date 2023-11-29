@@ -7,15 +7,13 @@ export default function Contact () {
     const flag = useSelector(state => state.flag);
     const [imageTop, setImageTop] = useState(2480);
 
-    console.log(window.scrollY);
-
     const parallaxOnScroll = () => {
         if (window.scrollY < 2180 || 2480 < window.scrollY) return;
 
         setImageTop(window.scrollY);
     }
 
-        // Mounting event listener for scrolling
+    // Mounting event listener for scrolling
     useEffect(() => {
         window.addEventListener('scroll', parallaxOnScroll);
         window.addEventListener('beforeunload', parallaxOnScroll);
