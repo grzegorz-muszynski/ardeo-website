@@ -2,12 +2,13 @@
 
 #Footer {
     border-top: 1px solid $red-logo;
-    height: 100px;
+    height: 51px;
     background-color: $black;
     position: relative;
     z-index: 1; // For hiding laptop's image
-    span {
+    p {
         color: $silver;
         font-family: aeonik;
+        text-align: center;
     }
 }

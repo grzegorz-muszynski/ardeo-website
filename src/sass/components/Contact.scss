@@ -143,11 +143,12 @@
             width: 100%;
             box-sizing: border-box;
             max-width: none;
-            opacity: 0.2;
+            opacity: 0.35;
             overflow: hidden;
             justify-content: end;
             img {
                 position: relative;
+                
                 width: 100%;
             }
         }

@@ -5,10 +5,12 @@ import menuScrolling from '../scripts/menuScrolling';
 
 export default function Contact () {
     const flag = useSelector(state => state.flag);
-    const [imageTop, setImageTop] = useState(0);
+    const [imageTop, setImageTop] = useState(2480);
+
+    console.log(window.scrollY);
 
     const parallaxOnScroll = () => {
-        if (window.scrollY < 2180 || window.scrollY > 2480) return;
+        if (window.scrollY < 2180 || 2480 < window.scrollY) return;
 
         setImageTop(window.scrollY);
     }
@@ -16,6 +18,7 @@ export default function Contact () {
         // Mounting event listener for scrolling
     useEffect(() => {
         window.addEventListener('scroll', parallaxOnScroll);
+        window.addEventListener('beforeunload', parallaxOnScroll);
 
         return () => window.removeEventListener('scroll', parallaxOnScroll);
     }, [])
@@ -88,7 +91,7 @@ export default function Contact () {
                     alt="Usługi informatyczne"
                     // style={{top: `${ (200 - (imageTop - 2180) * .8) }px`}}
                     style={window.innerWidth >= 1200 ? 
-                        {top: `${ (200 - (imageTop - 2180) * .8) }px`}
+                        {top: `${ (140 - (imageTop - 2180) * .8) }px`}
                         :
                         {top: '0px'}
                      }
