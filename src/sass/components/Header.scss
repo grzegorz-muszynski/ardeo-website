@@ -82,13 +82,10 @@
         .Header__menu-hidden {
             display: none;
         }
-//         .Header__menu-shown {
-// //
-//         }
         .Header__icons {
             width: 90px;
             padding-right: 10px;
-                        // mixin with all menu's button styling
+            // mixin with all menu's button styling
             @include proportions($width: 40px);
         }
     }

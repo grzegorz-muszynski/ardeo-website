@@ -1,15 +1,5 @@
 @import '../helpers/variables.scss';
 
-%inputs {
-    background-color: $silver;
-    line-height: 34px;
-    font-size: 22px;
-    &::placeholder {
-        color: hsl(0, 0%, 60%);
-        text-indent: 4px;
-    }
-}
-
 %titles {
     font-family: roboto;
     font-size: 40px;

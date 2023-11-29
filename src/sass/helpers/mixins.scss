@@ -51,3 +51,13 @@
         }
     }   
 }
+
+@mixin inputs($line-height, $font-size) {
+    // background-color: $silver;
+    line-height: $line-height;
+    font-size: $font-size;
+    &::placeholder {
+        color: hsl(0, 0%, 60%);
+        text-indent: 4px;
+    }
+}

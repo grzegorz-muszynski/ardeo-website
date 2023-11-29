@@ -1,5 +1,7 @@
-@import '../helpers/variables.scss';
+@import '../helpers/mixins.scss';
 @import '../helpers/placeholders.scss';
+@import '../helpers/variables.scss';
+
 
 #Contact {
     position: relative;
@@ -88,10 +90,10 @@
                         border-right: none;
                         border-left: none;
                         border-bottom: 1px solid $silver;
-                        @extend %inputs;
+
+                        @include inputs($line-height: 33px, $font-size: 22px);
                         &::placeholder {
                             color: hsl(0, 0%, 60%);
-                            // color: $red-logo;
                         }
                     }
                 }
@@ -104,18 +106,19 @@
                     padding: 8px;
                     border-radius: 20px;
                     
-                    @extend %inputs;
+                    @include inputs($line-height: 33px, $font-size: 22px);
                 }
                 .__btn {
                     cursor: pointer;
-                    font-size: 20px;
                     background-color: black;
                     color: $red-logo;
                     position: relative;
-                    width: $textarea__button-width;
-                    margin-top: 20px;
+                    font-size: 20px;
                     height: 40px;
-                    left: calc(50% - $textarea__button-width / 2);
+                    $btn-width: 100px;
+                    width: $btn-width;
+                    left: calc(50% - $btn-width / 2);
+                    margin-top: 20px;
                     border-radius: 8px;
                     border: 1px solid $silver;
                     &:hover {
@@ -191,19 +194,12 @@
 
 @media (max-width: $threshold1) {
     #Contact {
-    
-        // Laptop's picture
-        .__background {
-
-            img {
-
-            }
-        }
-    
+        height: 840px;
         // Container with all information
         .__container {
             .__infobox {
-                width: 300px;
+                margin: 0 auto;
+                width: 280px;
                 .__title {
                     width: 100%;
                     text-align: center;
@@ -211,6 +207,7 @@
                 .__desc {
                     width: 100%;
                     text-align: center;
+                    margin: 0;
                 }
                 .__info {
                     width: 250px;
@@ -220,14 +217,10 @@
                     // display
                     .__phone-number,
                     .__email {
-                        // display: flex;
-                        // align-items: center;
-                        // justify-content: flex-start;
                         img {
                             height: 20px;
                         }
                         p {
-                            // margin: 15px;
                             font-size: 18px;
                             line-height: 22px;
                             // color: $red-logo;
@@ -237,15 +230,22 @@
                 }
                 // Submit form
                 form {
+                    width: 100%;
                     .__inputs {
-                        display: flex;
-                        align-items: center;
                         input {
-                            background-color: transparent;
+                            width: 100%;
+                            @include inputs($line-height: 24px, $font-size: 16px);
+
                         }
                     }
                     textarea {
-                        background-color: transparent;
+                        @include inputs($line-height: 24px, $font-size: 16px);
+                    }
+                    .__btn {
+                        font-size: 16px;
+                        $btn-width: 70px;
+                        width: $btn-width;
+                        left: calc(50% - $btn-width / 2);
                     }
                 }
             }
