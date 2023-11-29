@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Card from "./Card/Card";
 import imageAlfaMotors from '../../assets/projects/alfa-motors.JPG';
@@ -22,24 +23,28 @@ export default function Projects () {
                     title="Alfa Motors"
                     alt="Aplikacje webowe"
                     href="https://alfamotors.pl/"
+                    animationDelay="1"
                 />
                 <Card 
                     imgSrc={imageOdnowa}
                     title="Odnowa"
                     alt="Strony internetowe dla biznesu"
                     href="https://odnowa-kubik.eu/"
+                    animationDelay="2"
                 />
                 <Card 
                     imgSrc={imageMedicalVita}
                     title="Medical-Vita"
                     alt="Strony internetowe"
                     href="https://medicalvita.pl/"
+                    animationDelay="3"
                 />
                 <Card 
                     imgSrc={imageAMGlobal}
                     title="AM Global"
                     alt="Comercial websites"
                     href="https://amglobal.pl/"
+                    animationDelay="4"
                 />
             </div>
         </section>

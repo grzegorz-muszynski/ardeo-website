@@ -31,7 +31,7 @@
             grid-template: repeat(2, 50%) / repeat(2, 50%);
             justify-items: center;
             align-items: center;
-            // Position of "Card" components
+            // Position of "Card" components, the rest of styling in Card.scss
             .Card {
                 &:nth-child(even) {
                     position: relative;
@@ -60,19 +60,9 @@
         .__cards {
             display: flex;
             flex-direction: column;
-            // Position of "Card" components
+            // Position of "Card" components, the rest of styling in Card.scss
             .Card {
                 margin-top: 40px;     
-                h1 {
-                    font-family: roboto;
-                    font-size: 40px;
-                    text-decoration: underline solid $silver 1px;
-                    text-underline-offset: 8px;   
-                    color: $red-logo;
-                    display: block;
-                    text-align: center;
-                    padding: 24px 48px 90px;
-                }
                 &:nth-child(even) {
                     top: 0px;
                 }

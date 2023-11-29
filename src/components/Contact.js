@@ -5,7 +5,7 @@ import menuScrolling from '../scripts/menuScrolling';
 
 export default function Contact () {
     const flag = useSelector(state => state.flag);
-    const [imageTop, setImageTop] = useState(2480);
+    const [imageTop, setImageTop] = useState(2180);
 
     const parallaxOnScroll = () => {
         if (window.scrollY < 2180 || 2480 < window.scrollY) return;
@@ -18,7 +18,10 @@ export default function Contact () {
         window.addEventListener('scroll', parallaxOnScroll);
         window.addEventListener('beforeunload', parallaxOnScroll);
 
-        return () => window.removeEventListener('scroll', parallaxOnScroll);
+        return () => {
+            window.removeEventListener('scroll', parallaxOnScroll);
+            window.removeEventListener('beforeunload', parallaxOnScroll);
+        }
     }, [])
 
     return (
