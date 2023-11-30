@@ -14,14 +14,6 @@ export default function Home () {
     const tl = gsap.timeline({ repeat: -1 });
     const [start, setStart] = useState(false);
 
-    const scrollToSection = (sectionId) => {
-        let section = document.getElementById(sectionId);
-        if (section) {
-          section.scrollIntoView({behavior: 'smooth', block: 'nearest'});
-        //   window.scrollBy(0, -50);
-        }
-      };
-
     useEffect(() => {
         setTimeout(() => {
             setStart(true);
@@ -70,6 +62,12 @@ export default function Home () {
                             </p>
                             <p className="forGSAP">
                                 {flag.language === "polish" ?
+                                "mobile developerami" 
+                                : 
+                                "Mobile developers"}
+                            </p>
+                            <p className="forGSAP">
+                                {flag.language === "polish" ?
                                 "programistami frontendowymi" 
                                 : 
                                 "Front-end Engineers"}
@@ -78,7 +76,7 @@ export default function Home () {
                     </div>
                     <div className="__buttons">
                         <a 
-                            onClick={() => scrollToSection('Contact')}
+                            onClick={menuScrolling}
                             data-height={'Contact'}
                             >{flag.language === "polish" ? "Napisz do nas" : "Hire us"}</a>
                         <a
