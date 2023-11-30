@@ -61,12 +61,6 @@ export default function About() {
             </ul>
 
             <span className="Header__icons">
-                {/* <img 
-                    src={menuBtn} 
-                    alt="Websites Kraków" 
-                    className="Header__icons-menu"
-                    onClick={toggleNavbar}
-                /> */}
                 <div 
                     className={showNavbar ? 
                         "Header__icons__menu Header__icons__menu-active" : 
