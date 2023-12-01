@@ -72,6 +72,30 @@ export default function Home () {
                                 : 
                                 "Front-end Engineers"}
                             </p>
+                            <p className="forGSAP">
+                                {flag.language === "polish" ?
+                                "web developerami" 
+                                : 
+                                "web developers"}
+                            </p>
+                            <p className="forGSAP">
+                                {flag.language === "polish" ?
+                                "designerami" 
+                                : 
+                                "designers"}
+                            </p>
+                            <p className="forGSAP">
+                                {flag.language === "polish" ?
+                                "mobile developerami" 
+                                : 
+                                "Mobile developers"}
+                            </p>
+                            <p className="forGSAP">
+                                {flag.language === "polish" ?
+                                "programistami frontendowymi" 
+                                : 
+                                "Front-end Engineers"}
+                            </p>
                         </span>
                     </div>
                     <div className="__buttons">
