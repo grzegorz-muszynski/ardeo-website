@@ -17,6 +17,7 @@
     .__cards {
         display: flex;
         justify-content: space-evenly;
+        overflow: hidden;
     }
 }
 
@@ -32,12 +33,13 @@
             grid-template: repeat(2, 50%) / repeat(2, 50%);
             justify-items: center;
             align-items: center;
+            padding-bottom: 100px; // Due to {overflow: hidden} in .__cards and {top: 100px} in .Card, the title of the lowest card is hidden, the padding makes space for showing it
+
             // Position of "Card" components, the rest of styling in Card.scss
             .Card {
                 &:nth-child(even) {
                     position: relative;
                     top: 100px;
-                    // transform: translateY(100px);
                 }
             }
         }

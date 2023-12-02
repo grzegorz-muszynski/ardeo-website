@@ -6,6 +6,8 @@
     height: 400px;
     width: 300px;
     color: $silver;
+    transform: translateX(100vw);
+    transition: transform 1s;
     .__frame {
         box-sizing: border-box;
         display: block;
@@ -44,7 +46,17 @@
 }
 
 .animated {
-    transform: translateX(-100%);
-    border: 3px solid green;
-    // transition: transform 1s;
+    transform: translateX(0%);
+    &:nth-of-type(1) {
+        transition: transform 1s;
+    }
+    &:nth-of-type(2) {
+        transition: transform 1s 0.1s;
+    }
+    &:nth-of-type(3) {
+        transition: transform 1s 0.2s;
+    }
+    &:nth-of-type(4) {
+        transition: transform 1s 0.3s;
+    }
 }
