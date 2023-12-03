@@ -10,7 +10,7 @@ const offsets:Offsets = {
     'Contact': [3620, 3640, 2900, 2900, 2850, 2500],
 }
 
-export default function menuScrolling (e) {
+export default function menuScrolling (e: any): void {
     let screenWidth = window.innerWidth; // Number
     let height;
 
