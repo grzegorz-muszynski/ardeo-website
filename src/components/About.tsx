@@ -3,8 +3,15 @@ import { useSelector } from "react-redux";
 import { gsap } from "gsap";
 import SplitTextJS from 'split-text-js';
 
+interface RootState {
+  flag: {
+    language: string; // Adjust the type based on your actual state structure
+    // Other properties if any
+  };
+}
+
 export default function About() {
-  const flag = useSelector(state: any => state.flag);
+  const flag = useSelector((state: RootState) => state.flag);
   const link: string  = '../assets/about/computers.jpg';
 
   // GSAP
@@ -65,7 +72,6 @@ export default function About() {
             :
             { transform: `translateY(${ (offsetY - 1200) * 0.65 }px)`}
           }
-          // style={{ transform: `translateY(${offsetY}px)`}}
         >
           <div className="__text" style={isHidden ? {display: "none"} : {display: "block"}}>
               <p className="__text-animated">{flag.language === "polish" ?

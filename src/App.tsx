@@ -40,7 +40,7 @@ function App() {
     <Router>
       <div id="App">
           <Routes>
-            <Route exact path='/' element={
+            <Route path='/' element={
               <>
                 {/* {loading && (<Preloader/>)} */}
                 <Header/>
