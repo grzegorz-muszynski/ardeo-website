@@ -1,9 +1,13 @@
-const offsets = {
+type Offsets = {
+    [key: string]: number[];
+};
+
+const offsets:Offsets = {
 //  '<Section>': [<offsets for different thresholds: 0-576, 577-768, ...>]
     'Home': [0, 0, 0, 0, 0, 0],
     'About': [785, 785, 785, 785, 785, 785],
     'Projects': [1580, 1580, 1720, 1720, 1720, 1720],
-    'Contact': [3620, 3640, 2900, 2900, 2850, 2400],
+    'Contact': [3620, 3640, 2900, 2900, 2850, 2500],
 }
 
 export default function menuScrolling (e) {

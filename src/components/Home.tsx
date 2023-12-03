@@ -1,17 +1,14 @@
+import React, { ReactElement } from 'react';
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { gsap } from "gsap";
-import menuScrolling from "../scripts/menuScrolling";
+import menuScrolling from "../scripts/menuScrolling.tsx";
 import SplitTextJS from 'split-text-js';
 
-// gsap.registerPlugin(SplitText);
-
-export default function Home () {
-    const flag = useSelector(state => state.flag);
-    const titles = gsap.utils.toArray('.forGSAP');
-    // const titles = ["web developers", "designers", "Front-end Engineers"];
-    // const titles = gsap.utils.toArray(["web developers", "designers", "Front-end Engineers"]);
-    const tl = gsap.timeline({ repeat: -1 });
+export default function Home (): ReactElement {
+    const flag: any = useSelector(state => state.flag);
+    const titles: string[] = gsap.utils.toArray('.forGSAP');
+    const tl: any = gsap.timeline({ repeat: -1 });
     const [start, setStart] = useState(false);
 
     useEffect(() => {

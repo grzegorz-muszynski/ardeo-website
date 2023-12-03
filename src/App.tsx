@@ -7,11 +7,11 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 // import Gallery from './components/Gallery';
-import Header from './components/Header';
-import Home from './components/Home';
+import Header from './components/Header.tsx';
+import Home from './components/Home.tsx';
 import Preloader from './components/Preloader';
 import Projects from './components/Projects/Projects';
-import Slider from './components/Slider';
+import Slider from './components/Slider.tsx';
 // import ThanksPol from './components/ThanksPol';
 // import ThanksEng from './components/ThanksEng';
 

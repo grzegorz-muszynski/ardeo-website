@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import laptopImg from '../assets/contact/laptop.jpg';
-import menuScrolling from '../scripts/menuScrolling';
+import menuScrolling from '../scripts/menuScrolling.tsx';
 
 export default function Contact () {
     const flag = useSelector(state => state.flag);

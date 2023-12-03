@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
+import React, { ReactElement } from 'react';
 import LogoIcon from '../assets/preloader/favicon-white.js';
 import LogoArdeo from '../assets/preloader/ardeo.js';
 
-export default function Preloader() {
+export default function Preloader(): ReactElement {
 
   return (
     <section id="Preloader">

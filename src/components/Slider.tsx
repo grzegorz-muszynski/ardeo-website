@@ -1,7 +1,8 @@
+import React, { ReactElement } from 'react';
 const images = require.context('../assets/slider', false);
 const imageList = images.keys().map(image => images(image));
 
-export default function Slider () {
+export default function Slider(): ReactElement {
 
     return (
         <section id="Slider">

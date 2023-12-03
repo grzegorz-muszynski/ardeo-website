@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import { ReactElement, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { chooseLanguage } from '../flagSlice';
-import menuScrolling from '../scripts/menuScrolling';
+import { chooseLanguage } from '../flagSlice.js';
+import menuScrolling from '../scripts/menuScrolling.tsx';
 import flagPol from '../assets/header/flags/flagPL.gif';
 import flagEng from '../assets/header/flags/flagUK.gif';
 // import menuBtn from '../assets/header/menu-btn.webp';
 import logo from '../assets/logo/colourful.png';
 
-export default function About() {
+export default function About(): ReactElement {
     const flag = useSelector(state => state.flag);
     const dispatch = useDispatch();
     const [showNavbar, setShowNavbar] = useState(false);
