@@ -33,7 +33,6 @@ export default function About() {
                 className={showNavbar ? 
                 "Header__menu Header__menu-shown" : 
                 "Header__menu Header__menu-hidden"}
-                // onClick={handleClosing}
             >
                 {/* Home section */}
                 <li
