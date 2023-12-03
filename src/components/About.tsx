@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { gsap } from "gsap";
-
 import SplitTextJS from 'split-text-js';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 export default function About() {
   const flag = useSelector(state => state.flag);
-  const link = '../assets/about/computers.jpg';
+  const link: string  = '../assets/about/computers.jpg';
 
   // GSAP
   const titles = gsap.utils.toArray('.__text-animated');
@@ -18,7 +16,7 @@ export default function About() {
   // Parallax effect
   const [offsetY, setOffsetY] = useState(0); // The variable
 
-  const handleScroll = () => {
+  const handleScroll = (): void => {
     // The variable below decides when the animated text stops moving up or down
     if (window.pageYOffset > 1400 || window.innerHeight + window.scrollY < 1240) return;
 

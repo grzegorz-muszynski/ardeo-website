@@ -17,7 +17,7 @@ export default function Home (): ReactElement {
         }, 2500);
     }, []);
     
-    // Don't know why useEffect below doesn't start at first run so it needs a trigger above
+    // useEffect below doesn't start at first run so it needs a trigger above
     useEffect(() => {
         titles.forEach(title => {
             const splitTitle = new SplitTextJS(title);

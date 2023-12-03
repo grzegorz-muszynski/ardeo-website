@@ -1,6 +1,6 @@
+import { ReactElement } from "react";
 
-
-export default function Footer () {
+export default function Footer(): ReactElement {
 
     return (
         <section id="Footer">

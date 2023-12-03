@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import laptopImg from '../assets/contact/laptop.jpg';
-import menuScrolling from '../scripts/menuScrolling.tsx';
+import menuScrolling from '../scripts/menuScrolling';
 
-export default function Contact () {
-    const flag = useSelector(state => state.flag);
+export default function Contact(): ReactElement {
+    const flag: any = useSelector(state => state.flag);
     const [imageTop, setImageTop] = useState(2180);
 
-    const parallaxOnScroll = () => {
+    const parallaxOnScroll = (): void => {
         if (window.scrollY < 2180 || 2480 < window.scrollY) return;
 
         setImageTop(window.scrollY);

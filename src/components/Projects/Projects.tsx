@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import Card from "./Card/Card";
+import Card from "./Card/Card.tsx";
 import imageAlfaMotors from '../../assets/projects/alfa-motors.JPG';
 import imageOdnowa from '../../assets/projects/odnowa.JPG';
 import imageMedicalVita from '../../assets/projects/medical-vita.JPG';

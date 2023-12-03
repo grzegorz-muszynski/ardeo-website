@@ -1,16 +1,16 @@
-import { useEffect, useRef, useState } from "react";
+import { ReactElement, useEffect, useRef, useState } from "react";
 
-export default function Card (props) {
+export default function Card (props: any): ReactElement {
     const [isVisible, setIsVisible] = useState(false);
-    const ref = useRef(null);
+    const ref: React.MutableRefObject<null> = useRef(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
+        const observer: IntersectionObserver = new IntersectionObserver(
             ([entry]) => {
                 if (!entry.isIntersecting) return; // The line makes animations are displayed only once
                 setIsVisible(entry.isIntersecting);
             },
-            { threshold: "0.1" }
+            { threshold: 0.1 }
         );
         observer.observe(ref.current);
 

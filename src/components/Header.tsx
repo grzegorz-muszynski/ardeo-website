@@ -4,23 +4,22 @@ import { chooseLanguage } from '../flagSlice.js';
 import menuScrolling from '../scripts/menuScrolling.tsx';
 import flagPol from '../assets/header/flags/flagPL.gif';
 import flagEng from '../assets/header/flags/flagUK.gif';
-// import menuBtn from '../assets/header/menu-btn.webp';
 import logo from '../assets/logo/colourful.png';
 
 export default function About(): ReactElement {
     const flag = useSelector(state => state.flag);
-    const dispatch = useDispatch();
+    const dispatch: Dispatch = useDispatch();
     const [showNavbar, setShowNavbar] = useState(false);
 
-    const handleClosing = () => {
+    const handleClosing = (): void => {
         setShowNavbar(false);
     }
 
-    const toggleNavbar = () => {
+    const toggleNavbar = (): void => {
         setShowNavbar(!showNavbar);
     }
 
-    const scrollAndClose = (e) => {
+    const scrollAndClose = (e: any): void => {
         menuScrolling(e);
         handleClosing();
     }
@@ -74,7 +73,6 @@ export default function About(): ReactElement {
 
                 <img 
                     src={flag.language === "english" ? flagPol : flagEng}
-                    // {require("../assets/header/flags/flagPL.gif")} 
                     alt="Strony internetowe Polska" 
                     className="Header__icons__flag"
                     onClick={() => dispatch(chooseLanguage(flag.language === 'english' ? 'polish' : 'english'))}

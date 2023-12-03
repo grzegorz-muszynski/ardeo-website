@@ -3,14 +3,14 @@ import React, { useEffect, useState } from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.scss';
 
-import About from './components/About';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import About from './components/About.tsx';
+import Contact from './components/Contact.tsx';
+import Footer from './components/Footer.tsx';
 // import Gallery from './components/Gallery';
 import Header from './components/Header.tsx';
 import Home from './components/Home.tsx';
 import Preloader from './components/Preloader';
-import Projects from './components/Projects/Projects';
+import Projects from './components/Projects/Projects.tsx';
 import Slider from './components/Slider.tsx';
 // import ThanksPol from './components/ThanksPol';
 // import ThanksEng from './components/ThanksEng';
