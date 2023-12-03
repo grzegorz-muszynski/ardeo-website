@@ -10,8 +10,7 @@ export default function Card (props) {
                 if (!entry.isIntersecting) return; // The line makes animations are displayed only once
                 setIsVisible(entry.isIntersecting);
             },
-            // { rootMargin: "-300px" }
-            { threshold: "0.2" }
+            { threshold: "0.1" }
         );
         observer.observe(ref.current);
 
