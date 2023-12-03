@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 
 // Extending the NodeModule interface
 interface NodeModule {

@@ -3,16 +3,20 @@ import { useSelector } from "react-redux";
 import laptopImg from '../assets/contact/laptop.jpg';
 import smartphone from '../assets/contact/smartphone-red.png';
 import email from '../assets/contact/email-red.png';
-import menuScrolling from '../scripts/menuScrolling';
 
 export default function Contact(): ReactElement {
     const flag: any = useSelector((state: any) => state.flag);
     const [imageTop, setImageTop] = useState(2180);
+    const [showThanks, setShowThanks] = useState(false);
 
     const parallaxOnScroll = (): void => {
         if (window.scrollY < 2180 || 2480 < window.scrollY) return;
 
         setImageTop(window.scrollY);
+    }
+
+    const displayThanks = (): void => {
+        setShowThanks(false);
     }
 
     // Mounting event listener for scrolling
@@ -48,7 +52,15 @@ export default function Contact(): ReactElement {
                             <p>ardeo.biuro@gmail.com</p>
                         </span>
                     </div>
-                    <form action="https://formsubmit.co/ardeo.biuro@gmail.com" method="POST">
+
+                    {/* Contact form */}
+                    <form 
+                        action="https://formsubmit.co/ardeo.biuro@gmail.com" 
+                        method="POST"
+                        onSubmit={displayThanks}
+                        // style={showThanks ? {display: "none"} :{display: "block"}}
+                        style={{display: "none"}}
+                    >
                         <div className="__inputs">
                             <input 
                                 type="name" 
@@ -73,7 +85,7 @@ export default function Contact(): ReactElement {
                             required 
                         />
                         <input type="hidden" name="_subject" value="Zamówienie - strona internetowa" />
-                        <input type="hidden" name="_next" value="thanks" />
+                        <input type="hidden" name="_next" value="Thanks" />
 
                         {/* <button> replaced with <input> due to Safari browser */}
                         <input 
@@ -82,6 +94,18 @@ export default function Contact(): ReactElement {
                             value={flag.language === "polish" ? "Wyślij" : "Submit"}
                         />
                     </form>
+
+                    {/* Thanks for the client displayed instead of form */}
+                    <div className="__thanks">
+                        <p>
+                            &#9989;
+                            {flag.language === "polish" ?
+                                "Dziękujemy za wypełnienie formularza. Odpowiemy najpóźniej w kolejnym dniu roboczym."
+                                : 
+                                "Thank you for submitting the form. We will respond no later than the next business day."
+                            }
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -91,7 +115,6 @@ export default function Contact(): ReactElement {
                     className="__img" 
                     src={laptopImg} 
                     alt="Usługi informatyczne"
-                    // style={{top: `${ (200 - (imageTop - 2180) * .8) }px`}}
                     style={window.innerWidth >= 1200 ? 
                         {top: `${ (140 - (imageTop - 2180) * .8) }px`}
                         :

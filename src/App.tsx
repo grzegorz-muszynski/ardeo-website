@@ -6,14 +6,12 @@ import './App.scss';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-// import Gallery from './components/Gallery';
 import Header from './components/Header';
 import Home from './components/Home';
 import Preloader from './components/Preloader';
 import Projects from './components/Projects/Projects';
 import Slider from './components/Slider';
-// import ThanksPol from './components/ThanksPol';
-// import ThanksEng from './components/ThanksEng';
+// import Thanks from './components/Thanks';
 
 import './sass/components/About.scss';
 import './sass/components/Projects/Card/Card.scss';
@@ -29,12 +27,12 @@ import './sass/components/Slider.scss';
 function App() {
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 3650);
-  // }, []);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3650);
+  }, []);
 
   return (
     <Router>
@@ -42,7 +40,7 @@ function App() {
           <Routes>
             <Route path='/' element={
               <>
-                {/* {loading && (<Preloader/>)} */}
+                {loading && (<Preloader/>)}
                 <Header/>
                 <Home/>
                 <Slider/>
