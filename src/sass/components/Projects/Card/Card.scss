@@ -1,62 +1,89 @@
 @import '../../../helpers/variables.scss';
 
 .Card {
-    // Position of those components is declared in Projects.scss
-    box-sizing: border-box;
-    height: 400px;
-    width: 300px;
-    color: $silver;
-    transform: translateX(100vw);
-    transition: transform 1s;
-    .__frame {
+    // Position of components with this class is declared in Projects.scss
+    .__liner {
+        color: $silver;
         box-sizing: border-box;
-        display: block;
-        height: 75%;
-        overflow: hidden;
-        cursor: pointer;
-        .__container {
-            height: 100%;
-            width: 100%;
-            perspective: 100px;
-            padding: 0;
-            :not(:hover) {
-                transform: translateZ(0);
-                transition: transform 1s;
-            }
-            :hover {
-                transform: translateZ(30px);
-                transition: transform 1s;
-            }
-            img {
-                object-fit: cover;
+        width: 300px;
+        height: 400px;
+        transform: translateX(100vw);
+        transition: transform 1s;
+        .__frame {
+            box-sizing: border-box;
+            display: block;
+            height: 75%;
+            overflow: hidden;
+            cursor: pointer;
+            .__container {
                 height: 100%;
                 width: 100%;
-                // object-position: center;
+                perspective: 100px;
+                padding: 0;
+                :not(:hover) {
+                    transform: translateZ(0);
+                    transition: transform 1s;
+                }
+                :hover {
+                    transform: translateZ(30px);
+                    transition: transform 1s;
+                }
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                    // object-position: center;
+                }
             }
         }
+        h2 {
+            text-align: center;
+            font-family: aeonik;
+            font-size: 30px;
+            text-decoration: underline solid $red-logo 1px;
+            text-underline-offset: 8px;    
+            cursor: default;
+        }
     }
-    h2 {
-        text-align: center;
-        font-family: aeonik;
-        font-size: 30px;
-        text-decoration: underline solid $red-logo 1px;
-        text-underline-offset: 8px;    
-        cursor: default;
+    
+    .__liner-animated {
+        transform: translateX(0%);
     }
-}
-
-.animated {
-    transform: translateX(0%);
+    // Different delay for each card
     &:nth-of-type(1) {
-        transition: transform 1s;
+        > :nth-child(1) {
+            transition: transform 1s;
+        }
     }
     &:nth-of-type(2) {
-        transition: transform 1s 0.1s;
+        > :nth-child(1) {
+            transition: transform 1s 150ms;
+        }
     }
     &:nth-of-type(3) {
-        transition: transform 1s 0.2s;
+        > :nth-child(1) {
+            transition: transform 1s 300ms;
+        }
     }
     &:nth-of-type(4) {
-        transition: transform 1s 0.3s;
+        > :nth-child(1) {
+            transition: transform 1s 450ms;
+        }
+    }
+}   
+
+@media (max-width: $threshold5) {
+    .Card {
+        &:nth-child(odd) {
+            .__liner {  
+                transform: translateX(-100vw);
+                opacity: 0;
+            }
+        }
+        .__liner-animated {
+            transform: translateX(0%) !important; // Necessary to take precedence ober "transfrom" property above
+            opacity: 1 !important;
+            transition: all 1s 0s;
+        }
     }
 }

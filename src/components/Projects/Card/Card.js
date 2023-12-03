@@ -1,41 +1,35 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function Card (props) {
-    const [isAnimated, setIsAnimated] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                console.log(entry.isIntersecting);
+                if (!entry.isIntersecting) return; // The line makes animations are displayed only once
                 setIsVisible(entry.isIntersecting);
             },
-            { rootMargin: "0px" } // options
+            // { rootMargin: "-300px" }
+            { threshold: "0.2" }
         );
         observer.observe(ref.current);
 
         return () => observer.disconnect();
     }, []);
 
-    useEffect(() => {
-        if (isVisible) {
-            ref.current.querySelectorAll("div").forEach((el) => {
-            el.classList.add("animated");
-            });
-        } else {
-            ref.current.querySelectorAll("div").forEach((el) => {
-            el.classList.remove("animated");
-            });
-        }
-    }, [isVisible]);
-
     return (
         <div 
-            className={isVisible ? "Card animated" : "Card"}
+            className={"Card"}
             ref={ref}
         >
-            <div>
+            <div 
+                className={isVisible ? 
+                    "__liner __liner-animated" 
+                    : 
+                    "__liner"
+                }
+            >
                 <a className="__frame" href={props.href}>
                     <div className="__container">
                         <img 
