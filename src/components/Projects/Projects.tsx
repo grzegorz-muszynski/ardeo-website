@@ -1,13 +1,12 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import Card from "./Card/Card.tsx";
+import Card from "./Card/Card";
 import imageAlfaMotors from '../../assets/projects/alfa-motors.JPG';
 import imageOdnowa from '../../assets/projects/odnowa.JPG';
 import imageMedicalVita from '../../assets/projects/medical-vita.JPG';
 import imageAMGlobal from '../../assets/projects/amglobal.JPG';
 
 export default function Projects () {
-    const flag = useSelector(state => state.flag);
+    const flag = useSelector((state: any) => state.flag);
 
     return (
         <section id="Projects">

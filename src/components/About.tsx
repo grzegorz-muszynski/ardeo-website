@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import SplitTextJS from 'split-text-js';
 
 export default function About() {
-  const flag = useSelector(state => state.flag);
+  const flag = useSelector(state: any => state.flag);
   const link: string  = '../assets/about/computers.jpg';
 
   // GSAP

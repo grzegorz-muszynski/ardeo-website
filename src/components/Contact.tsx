@@ -1,10 +1,12 @@
 import { ReactElement, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import laptopImg from '../assets/contact/laptop.jpg';
+import smartphone from '../assets/contact/smartphone-red.png';
+import email from '../assets/contact/email-red.png';
 import menuScrolling from '../scripts/menuScrolling';
 
 export default function Contact(): ReactElement {
-    const flag: any = useSelector(state => state.flag);
+    const flag: any = useSelector((state: any) => state.flag);
     const [imageTop, setImageTop] = useState(2180);
 
     const parallaxOnScroll = (): void => {
@@ -38,11 +40,11 @@ export default function Contact(): ReactElement {
                     </p>
                     <div className="__info">                
                         <span className="__phone-number">
-                            <img src={require("../assets/contact/smartphone-red.png")} alt="Aplikacje mobilne Polska" />
+                            <img src={smartphone} alt="Aplikacje mobilne Polska" />
                             <p>+48 607 909 990</p>
                         </span>
                         <span className="__email">
-                            <img src={require("../assets/contact/email-red.png")} alt="Aplikacje mobilne Polska" />
+                            <img src={email} alt="Aplikacje mobilne Polska" />
                             <p>ardeo.biuro@gmail.com</p>
                         </span>
                     </div>
@@ -62,9 +64,8 @@ export default function Contact(): ReactElement {
                             />
                         </div>
                         <textarea 
-                            type="text" 
                             name="Treść"
-                            rows="8"
+                            rows={8}
                             placeholder={flag.language === "polish" ? 
                                 "Chciałbym spytać o..." 
                                 : 

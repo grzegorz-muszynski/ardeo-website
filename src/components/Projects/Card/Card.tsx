@@ -1,8 +1,8 @@
-import { ReactElement, useEffect, useRef, useState } from "react";
+import { ReactElement, RefObject, useEffect, useRef, useState } from "react";
 
 export default function Card (props: any): ReactElement {
     const [isVisible, setIsVisible] = useState(false);
-    const ref: React.MutableRefObject<null> = useRef(null);
+    const ref: any = useRef(null);
 
     useEffect(() => {
         const observer: IntersectionObserver = new IntersectionObserver(

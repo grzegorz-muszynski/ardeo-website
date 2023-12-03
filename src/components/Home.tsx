@@ -2,11 +2,12 @@ import React, { ReactElement } from 'react';
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { gsap } from "gsap";
-import menuScrolling from "../scripts/menuScrolling.tsx";
+import menuScrolling from "../scripts/menuScrolling";
 import SplitTextJS from 'split-text-js';
+import portrait from "../assets/home/me.png";
 
 export default function Home (): ReactElement {
-    const flag: any = useSelector(state => state.flag);
+    const flag: any = useSelector((state: any) => state.flag);
     const titles: string[] = gsap.utils.toArray('.forGSAP');
     const tl: any = gsap.timeline({ repeat: -1 });
     const [start, setStart] = useState(false);
@@ -106,7 +107,7 @@ export default function Home (): ReactElement {
                          >{flag.language === "polish" ? "Sprawdź nasze portfolio" : "View our portfolio"}</a>
                     </div>
                 </div>
-                <img className="__photo" src={require("../assets/home/me.png")} alt="Programiści Kraków" />
+                <img className="__photo" src={portrait} alt="Programiści Kraków" />
             </div>
         </section>
     )

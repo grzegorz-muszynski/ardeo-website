@@ -1,14 +1,14 @@
 import { ReactElement, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { chooseLanguage } from '../flagSlice.js';
-import menuScrolling from '../scripts/menuScrolling.tsx';
+import menuScrolling from '../scripts/menuScrolling';
 import flagPol from '../assets/header/flags/flagPL.gif';
 import flagEng from '../assets/header/flags/flagUK.gif';
 import logo from '../assets/logo/colourful.png';
 
 export default function About(): ReactElement {
-    const flag = useSelector(state => state.flag);
-    const dispatch: Dispatch = useDispatch();
+    const flag = useSelector((state: any) => state.flag);
+    const dispatch = useDispatch();
     const [showNavbar, setShowNavbar] = useState(false);
 
     const handleClosing = (): void => {

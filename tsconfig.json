@@ -20,9 +20,12 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
     "types": [
-      "node",
-      "webpack-env" // For error: Property 'context' does not exist on type 'NodeRequire'
+      "webpack-env"
     ]
   },
   "include": [
