@@ -58,8 +58,7 @@ export default function Contact(): ReactElement {
                         action="https://formsubmit.co/ardeo.biuro@gmail.com" 
                         method="POST"
                         onSubmit={displayThanks}
-                        // style={showThanks ? {display: "none"} :{display: "block"}}
-                        style={{display: "none"}}
+                        style={showThanks ? {display: "none"} :{display: "block"}}
                     >
                         <div className="__inputs">
                             <input 
@@ -96,7 +95,10 @@ export default function Contact(): ReactElement {
                     </form>
 
                     {/* Thanks for the client displayed instead of form */}
-                    <div className="__thanks">
+                    <div 
+                        className="__thanks"
+                        style={showThanks ? {display: "block"} :{display: "none"}}
+                    >
                         <p>
                             &#9989;
                             {flag.language === "polish" ?
