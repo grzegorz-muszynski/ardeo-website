@@ -25,7 +25,6 @@
                 letter-spacing: -0.05em;
             }
             .__show {
-                // width: 380px;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
@@ -38,13 +37,9 @@
                 .__wrapper {
                     p {
                         font-size: 20px;
-                        // text-align: center;
                         text-align: left;
                         margin: 0;
                         line-height: 0;
-                        // &:nth-of-type(3) {
-                        //     color: $red-logo;
-                        // }
                     }
                 }
             }
@@ -100,7 +95,6 @@
             .__info {
                 padding: 80px 0 130px;
             }
-            // width: 100%;
             .__photo {
                 display: none;
             }

@@ -1,12 +1,9 @@
 @import '../helpers/variables.scss';
 
 #Slider {
-    // height: 250px;
-    // height: $slider-height;
     margin: auto;
     position: relative;
     z-index: 2;
-    // width: 90%;
     border-top: 8px solid $red-logo;
     border-bottom: 8px solid $red-logo;
     background-color: white;
@@ -24,12 +21,10 @@
         }
         .__icon {
             height: 150px;
-            // width: 250px;
             width: $icon-width;
             display: flex;
             align-items: center;
             justify-content: center;
-            // padding: 15px;
             perspective: 100px; // Necessary for moving element on Z axis
             img {
                 max-height: 60%;

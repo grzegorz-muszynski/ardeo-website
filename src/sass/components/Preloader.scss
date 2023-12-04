@@ -10,7 +10,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // animation: wrap .8s 1.5s ease-out;
     animation: wrap .7s calc($animations + 2s) ease-in;
 
     .__box {      
@@ -46,18 +45,14 @@
                 font-family: "archivo", sans-serif;
                 font-size: 20px;
                 color: $red-lighter;
-                // color: white;
                 letter-spacing: 0.08em;
                 display: inline-block;
-                // transform: translateY(50px);
 
                 &:nth-of-type(odd) {
                     animation: slipIn $animations ease-out;
-                    // animation: textChange 2.5s, slipIn $animations ease-out;
                 }
                 &:nth-of-type(even) {
                     animation: slipIn $animations ease-out 350ms, hide 501ms;
-                    // animation: textChange 2.5s, slipIn $animations ease-out 500ms, hide 501ms;
                     padding-left: 3px;
                 }
             }
@@ -77,13 +72,11 @@
 
 @keyframes pushLogo {
     0% {
-        // transform: translateZ(200px);
         height: 250px;
         width: 250px;
         opacity: 0.5;
     }
     100% {
-        // transform: translateZ(0);
         height: 100px;
         width: 100px;
         opacity: 1;
@@ -140,9 +133,6 @@
     0% {
         transform: translateY(0);
     }
-    // 10% {
-    //     transform: translateY(10%);
-    // }
     100% {
         transform: translateY(-200%);
     }

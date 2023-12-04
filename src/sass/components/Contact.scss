@@ -83,7 +83,6 @@
                     flex-direction: column;
                     input {
                         color: $silver;
-                        // color: hsl(0, 0%, 60%);
                         background-color: hsl(0, 0%, 0%);
                         width: 430px;
                         margin-bottom: 20px;
@@ -146,7 +145,6 @@
     #Contact {
         height: 1000px;
         display: flex;
-        // justify-content: center;
         align-items: center;
         // Laptop's image
         .__background {
@@ -241,7 +239,6 @@
                         p {
                             font-size: 18px;
                             line-height: 22px;
-                            // color: $red-logo;
                             padding-left: 4px;
                         }
                     }

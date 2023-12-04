@@ -41,7 +41,6 @@
         }
         // Flag
         .Header__icons__flag {
-            // $height: $header-flag-height;
             $height: 28px;
             height: $height;
             width: calc($height * 8 / 5);
