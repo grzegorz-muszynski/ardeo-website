@@ -1,6 +1,7 @@
 import { ReactElement, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { chooseLanguage } from '../flagSlice.js';
+// import { chooseLanguage } from '../flagSlice.js';
+import { chooseLanguage } from '../flagSlice';
 import menuScrolling from '../scripts/menuScrolling';
 import flagPol from '../assets/header/flags/flagPL.gif';
 import flagEng from '../assets/header/flags/flagUK.gif';
@@ -26,7 +27,13 @@ export default function About(): ReactElement {
 
     return (
         <section id='Header'>
-            <img className="Header__logo" src={logo} alt="Tworzenie stron internetowych" />
+            <img 
+                className="Header__logo" 
+                src={logo} 
+                alt="Tworzenie stron internetowych" 
+                onClick={scrollAndClose} 
+                data-height={'Home'}
+            />
         
             <ul 
                 className={showNavbar ? 
