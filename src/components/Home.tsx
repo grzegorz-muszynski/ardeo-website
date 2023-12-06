@@ -24,20 +24,16 @@ export default function Home (): ReactElement {
             const splitTitle = new SplitTextJS(title);
 
             tl.from(splitTitle.chars, {
-                // duration: 0.7,
                 opacity: 0,
                 y: 80,
                 rotateX: -90,
                 stagger: .02,
-                // duration: 0.6,
                 delay: 0.25
             }, "<").to(splitTitle.chars, {
-                // duration: 0.7,
                 opacity: 0,
                 y: -80,
                 rotateX: 90,
                 stagger: .02,
-                // duration: 0.6,
                 delay: 2
             }, "<1")
         });
