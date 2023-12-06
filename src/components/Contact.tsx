@@ -84,7 +84,7 @@ export default function Contact(): ReactElement {
                             required 
                         />
                         <input type="hidden" name="_subject" value="Zamówienie - strona internetowa" />
-                        <input type="hidden" name="_next" value="Thanks" />
+                        <input type="hidden" name="_next" value="https://ardeo-studio.pl" />
 
                         {/* <button> replaced with <input> due to Safari browser */}
                         <input 

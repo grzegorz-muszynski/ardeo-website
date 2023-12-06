@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { gsap } from "gsap";
@@ -24,15 +24,21 @@ export default function Home (): ReactElement {
             const splitTitle = new SplitTextJS(title);
 
             tl.from(splitTitle.chars, {
+                // duration: 0.7,
                 opacity: 0,
                 y: 80,
                 rotateX: -90,
-                stagger: .02
+                stagger: .02,
+                duration: 0.6,
+                delay: 0.25
             }, "<").to(splitTitle.chars, {
+                // duration: 0.7,
                 opacity: 0,
                 y: -80,
                 rotateX: 90,
-                stagger: .02 
+                stagger: .02,
+                duration: 0.6,
+                delay: 0.25
             }, "<1")
         });
     }, [start, flag.language])

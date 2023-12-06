@@ -25,7 +25,8 @@
       "./types"
     ],
     "types": [
-      "webpack-env"
+      "webpack-env",
+      "node"
     ]
   },
   "include": [

@@ -1,17 +1,17 @@
 import { ReactElement } from 'react';
 
-// Extending the NodeModule interface
-interface NodeModule {
-    // Defining the context method for require
-    context(path: string, deep?: boolean, filter?: RegExp): {
-      keys: () => string[];
-      resolve: (key: string) => string;
-      id: string;
-    };
-  }
+// Define a type for the Webpack context
+interface imagesContext {
+  keys(): string[];
+  (id: string): string;
+  resolve(id: string): string;
+}
 
-const images: any = require.context('../assets/slider', false);
-const imageList = images.keys().map((image: any) => images(image));
+// Making TypeScript aware of the require.context
+const images = require.context('../assets/slider', false) as imagesContext;
+
+// Use the defined type
+const imageList: string[] = images.keys().map((image: string) => images(image));
 
 export default function Slider(): ReactElement {
 
