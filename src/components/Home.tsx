@@ -28,13 +28,13 @@ export default function Home (): ReactElement {
                 y: 80,
                 rotateX: -90,
                 stagger: .02,
-                delay: 0.25
+                // delay: 0.25
             }, "<").to(splitTitle.chars, {
                 opacity: 0,
                 y: -80,
                 rotateX: 90,
                 stagger: .02,
-                delay: 2
+                delay: 2.5
             }, "<1")
         });
     }, [start, flag.language])
