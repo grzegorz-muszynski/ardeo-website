@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: wrap .7s calc($animations + 2s) ease-in;
+    animation: wrap 0.8s calc($animations-time + 2s) ease-in;
 
     .__box {      
         display: flex;
@@ -19,11 +19,11 @@
         .__icon {
             margin-bottom: 20px;
             svg {
-                animation: spinLogo $animations linear, pushLogo linear $animations;
+                animation: spinLogo $animations-time linear, pushLogo linear $animations-time;
                 height: 100px;
                 width: 100px;
                 path {
-                    animation: colorChange $animations;
+                    animation: colorChange $animations-time;
                     fill: $red-logo;
                 }
             }
@@ -49,10 +49,10 @@
                 display: inline-block;
 
                 &:nth-of-type(odd) {
-                    animation: slipIn $animations ease-out;
+                    animation: slipIn $animations-time ease-out;
                 }
                 &:nth-of-type(even) {
-                    animation: slipIn $animations ease-out 350ms, hide 501ms;
+                    animation: slipIn $animations-time ease-out 350ms, hide 501ms;
                     padding-left: 3px;
                 }
             }
@@ -132,6 +132,9 @@
 @keyframes wrap {
     0% {
         transform: translateY(0);
+    }
+    80% {
+        transform: translateY(-200%);
     }
     100% {
         transform: translateY(-200%);
