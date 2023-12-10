@@ -8,7 +8,7 @@ interface imagesContext {
 }
 
 // Making TypeScript aware of the require.context
-const images = require.context('../assets/slider', false) as imagesContext;
+const images = require.context('../assets/slider/better-format', false) as imagesContext;
 
 // Use the defined type
 const imageList: string[] = images.keys().map((image: string) => images(image));
