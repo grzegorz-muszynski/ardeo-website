@@ -1,6 +1,6 @@
 import { ReactElement, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import laptopImg from '../assets/contact/laptop.jpg';
+import laptopImg from '../assets/contact/laptop.webp';
 import smartphone from '../assets/contact/smartphone-red.png';
 import email from '../assets/contact/email-red.png';
 

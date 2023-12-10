@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
 import Card from "./Card/Card";
-import imageAlfaMotors from '../../assets/projects/alfa-motors.JPG';
-import imageOdnowa from '../../assets/projects/odnowa.JPG';
-import imageMedicalVita from '../../assets/projects/medical-vita.JPG';
-import imageAMGlobal from '../../assets/projects/amglobal.JPG';
+import imageAlfaMotors from '../../assets/projects/alfa-motors.webp';
+import imageOdnowa from '../../assets/projects/odnowa.webp';
+import imageMedicalVita from '../../assets/projects/medical-vita.webp';
+import imageAMGlobal from '../../assets/projects/amglobal.webp';
 
 export default function Projects () {
     const flag = useSelector((state: any) => state.flag);

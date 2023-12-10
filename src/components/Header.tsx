@@ -1,6 +1,5 @@
 import { ReactElement, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { chooseLanguage } from '../flagSlice.js';
 import { chooseLanguage } from '../flagSlice';
 import menuScrolling from '../scripts/menuScrolling';
 import flagPol from '../assets/header/flags/flagPL.gif';

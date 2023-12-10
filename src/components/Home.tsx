@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { gsap } from "gsap";
 import menuScrolling from "../scripts/menuScrolling";
 import SplitTextJS from 'split-text-js';
-import portrait from "../assets/home/me.png";
+import portrait from "../assets/home/portrait.webp";
 
 export default function Home (): ReactElement {
     const flag: any = useSelector((state: any) => state.flag);
@@ -99,10 +99,10 @@ export default function Home (): ReactElement {
                         </span>
                     </div>
                     <div className="__buttons">
-                        <a 
+                        <a
                             onClick={menuScrolling}
                             data-height={'Contact'}
-                            >{flag.language === "polish" ? "Napisz do nas" : "Hire us"}</a>
+                        >{flag.language === "polish" ? "Napisz do nas" : "Hire us"}</a>
                         <a
                             onClick={menuScrolling}
                             data-height={'Projects'}
