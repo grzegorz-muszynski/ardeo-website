@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: wrap 0.8s calc($animations-time + 2s) ease-in;
+    animation: wrap 0.9s calc($animations-time + 2s) ease-in;
 
     .__box {      
         display: flex;
@@ -133,7 +133,7 @@
     0% {
         transform: translateY(0);
     }
-    80% {
+    70% {
         transform: translateY(-200%);
     }
     100% {

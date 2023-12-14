@@ -19,7 +19,7 @@ export default function Contact(): ReactElement {
         setShowThanks(false);
     }
 
-    // Mounting event listener for scrolling
+    // Event listener for scrolling
     useEffect(() => {
         window.addEventListener('scroll', parallaxOnScroll);
         window.addEventListener('beforeunload', parallaxOnScroll);
