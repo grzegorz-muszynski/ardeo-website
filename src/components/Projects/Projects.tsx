@@ -23,6 +23,7 @@ export default function Projects () {
                     alt="Aplikacje webowe"
                     href="https://alfamotors.pl/"
                     animationDelay="1"
+                    loading="lazy"
                 />
                 <Card 
                     imgSrc={imageOdnowa}
@@ -30,6 +31,7 @@ export default function Projects () {
                     alt="Strony internetowe dla biznesu"
                     href="https://odnowa-kubik.eu/"
                     animationDelay="2"
+                    loading="lazy"
                 />
                 <Card 
                     imgSrc={imageMedicalVita}
@@ -37,6 +39,7 @@ export default function Projects () {
                     alt="Strony internetowe"
                     href="https://medicalvita.pl/"
                     animationDelay="3"
+                    loading="lazy"
                 />
                 <Card 
                     imgSrc={imageAMGlobal}
@@ -44,6 +47,7 @@ export default function Projects () {
                     alt="Comercial websites"
                     href="https://amglobal.pl/"
                     animationDelay="4"
+                    loading="lazy"
                 />
             </div>
         </section>

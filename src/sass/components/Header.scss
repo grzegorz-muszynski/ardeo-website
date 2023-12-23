@@ -15,6 +15,7 @@
     justify-content: space-around;
     .Header__logo {
         height: 100px;
+        width: 330px;
         display: inline-block;
         cursor: pointer;
     }
@@ -147,6 +148,7 @@
         padding: 0;
         .Header__logo {
             height: 80px;
+            width: 240px;
         }
         .Header__menu {
             top: 124px;

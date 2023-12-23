@@ -4,7 +4,7 @@ import { chooseLanguage } from '../flagSlice';
 import menuScrolling from '../scripts/menuScrolling';
 import flagPol from '../assets/header/flags/flagPL.gif';
 import flagEng from '../assets/header/flags/flagUK.gif';
-import logo from '../assets/logo/colourful.png';
+import logo from '../assets/logo/colourful.webp';
 
 export default function About(): ReactElement {
     const flag = useSelector((state: any) => state.flag);
