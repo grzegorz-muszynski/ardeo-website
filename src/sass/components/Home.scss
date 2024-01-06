@@ -44,34 +44,60 @@
                 }
             }
             .__buttons {
+                box-sizing: border-box;
+                height: 60px;
                 margin-top: 60px;
                 a {
-                    box-sizing: border-box;
+                    position: relative;
+                    overflow: hidden;
+
+                    top: 10px;
+                    z-index: 2;
+                    // background-color: white;
+                    
                     cursor: pointer;
                     text-decoration: none;
                     padding: 8px 16px;
                     font-weight: 500;
                     border-radius: 16px;
-                    // Navlink to Contact section
-                    &:nth-of-type(odd) {
-                        background-color: $red-logo;
-                        color: $black;
-                        margin-right: 10px;
-                        &:hover {
-                            background-color: $black;
-                            color: $red-logo;
-                            border: 1px solid $red-logo;
-                            transition: all 900ms;
-                        }
-                    }
-                    // Navlink to Portfolio section
-                    &:nth-of-type(even) {
-                        color: $red-logo;
-                        border: 1px solid $red-logo;
-                        &:hover {
-                            
+                    color: $red-logo;
+                    border: 1px solid $red-logo;
+                    
+                    transition: 0.8s;
+                    
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 0%;
+                        border-radius: 0 0 50% 50%;
+                        // background-color: #3498db;
+                        // border: 1px solid yellow;
+                        // &:hover {
+                            //     height: 180%;
+                            //     color: green;
+                            // }
                         }
                         
+                        &:hover {
+                            color: white;
+                            
+                            &::before {
+                                // z-index: 1;
+                                height: 130%;
+                                background-color: green;
+                                border: 1px solid pink;
+                                transition: 1s;
+                            }
+                        }
+                    
+
+                    // Navlink to Contact section
+                    &:nth-of-type(odd) {
+                        margin-right: 10px;
                     }
                 }
             }
