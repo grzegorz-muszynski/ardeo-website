@@ -99,10 +99,12 @@ export default function Home (): ReactElement {
                         </span>
                     </div>
                     <div className="__buttons">
+                        {/* Navlink to Contact section */}
                         <a
                             onClick={menuScrolling}
                             data-height={'Contact'}
                         >{flag.language === "polish" ? "Napisz do nas" : "Hire us"}</a>
+                        {/* Navlink to Portfolio section */}
                         <a
                             onClick={menuScrolling}
                             data-height={'Projects'}

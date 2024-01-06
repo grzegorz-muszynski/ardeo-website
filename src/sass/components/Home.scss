@@ -46,19 +46,25 @@
             .__buttons {
                 margin-top: 60px;
                 a {
+                    box-sizing: border-box;
                     cursor: pointer;
                     text-decoration: none;
                     padding: 8px 16px;
                     font-weight: 500;
                     border-radius: 16px;
+                    // Navlink to Contact section
                     &:nth-of-type(odd) {
                         background-color: $red-logo;
                         color: $black;
                         margin-right: 10px;
                         &:hover {
-                            
+                            background-color: $black;
+                            color: $red-logo;
+                            border: 1px solid $red-logo;
+                            transition: all 900ms;
                         }
                     }
+                    // Navlink to Portfolio section
                     &:nth-of-type(even) {
                         color: $red-logo;
                         border: 1px solid $red-logo;

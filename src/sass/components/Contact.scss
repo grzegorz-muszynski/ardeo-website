@@ -124,6 +124,7 @@
                     &:hover {
                         color: $silver;
                         border-color: $red-logo;
+                        transition: all 400ms;
                     }
                 }
             }
