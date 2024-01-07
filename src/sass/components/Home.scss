@@ -47,6 +47,8 @@
             // Div with both buttons (contact and projects)
             .__buttons {
                 margin-top: 60px;
+                position: relative;
+                z-index: 2; // z-index must have higher value than __box div from About section
                 // The button
                 a {
                     box-sizing: border-box;
@@ -75,14 +77,14 @@
                         border-radius: 10px;
                         z-index: -1;
                     }
-                    // Navlink to Contact section and it's pseudoelement child
+                    // Navlink to Contact section and it's pseudo-element child
                     &:nth-of-type(odd) {
                         margin-right: 10px;
                         &:before {
                             right: 0;
                         }
                     }
-                    // Navlink to Projects section and it's pseudoelement child
+                    // Navlink to Projects section and it's pseudo-element child
                     &:nth-of-type(even) {
                         &:before {
                             left: 0;
