@@ -70,7 +70,6 @@
                         content: '';
                         position: absolute;
                         bottom: 0;
-                        left: 0;
                         width: 0%;
                         height: 100%;
                         transition: all .4s;
@@ -78,16 +77,33 @@
                         border-radius: 10px;
                         z-index: -1;
                     }
-                    &:hover {
-                        color: $black;
-                        &:before {
-                            left: 0;
-                            width: 100%;
-                        }
-                    }
-                    // Navlink to Contact section
+                    // Navlink to Contact section and it's pseudoelement child
                     &:nth-of-type(odd) {
                         margin-right: 10px;
+                        &:before {
+                            right: 0;
+                        }
+                    }
+                    // Navlink to Projects section and it's pseudoelement child
+                    &:nth-of-type(even) {
+                        &:before {
+                            left: 0;
+                        }
+                    }            
+                    &:hover {
+                        color: $black;
+                        &:nth-of-type(odd) {
+                            &:before {
+                                // right: 0;
+                                width: 100%;
+                            }
+                        }
+                        &:nth-of-type(even) {
+                            &:before {
+                                // left: 0;
+                                width: 100%;
+                            }
+                        }
                     }
                 }
             }
