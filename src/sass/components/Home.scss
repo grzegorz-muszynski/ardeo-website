@@ -43,17 +43,45 @@
                     }
                 }
             }
+
+            // Div with two buttons (contact and projects)
             .__buttons {
                 margin-top: 60px;
+                // The button
                 a {
-                    box-sizing: border-box;
+                    height: 180px;
                     cursor: pointer;
                     text-decoration: none;
                     padding: 8px 16px;
                     font-weight: 500;
-                    border-radius: 16px;
+                    border-radius: 30px;
                     color: $red-logo;
-                    border: 1px solid $red-logo;
+                    border: 1.5px solid $red-logo;
+
+                    transition: all 300ms;
+                    position: relative;
+                    overflow: hidden;
+                    z-index: 1;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        width: 0%;
+                        height: 100%;
+                        background-color: $red-logo;
+                        transition: all .3s;
+                        border-radius: 10rem;
+                        z-index: -1;
+                    }
+                    &:hover {
+                        color: $black;
+                        &:before {
+                            left: 0;
+                            width: 100%;
+                        }
+                    }
                     // Navlink to Contact section
                     &:nth-of-type(odd) {
                         margin-right: 10px;
