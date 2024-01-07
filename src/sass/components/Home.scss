@@ -44,15 +44,13 @@
                 }
             }
 
-            // Div with two buttons (contact and projects)
+            // Div with both buttons (contact and projects)
             .__buttons {
                 margin-top: 60px;
                 // The button
                 a {
-                    // text-transform: uppercase;
                     box-sizing: border-box;
                     height: $buttons-height;
-                    // line-height: $buttons-height;
                     padding: $buttons-height/5.5 16px;
                     color: $red-logo;
                     border: 1.5px solid $red-logo;
@@ -89,20 +87,12 @@
                         &:before {
                             left: 0;
                         }
-                    }            
+                    }         
+                    // The hover effect for both buttons   
                     &:hover {
                         color: $black;
-                        &:nth-of-type(odd) {
-                            &:before {
-                                // right: 0;
-                                width: 100%;
-                            }
-                        }
-                        &:nth-of-type(even) {
-                            &:before {
-                                // left: 0;
-                                width: 100%;
-                            }
+                        &:before {
+                            width: 100%;
                         }
                     }
                 }
