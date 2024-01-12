@@ -40,7 +40,7 @@ function App() {
           <Routes>
             <Route path='/' element={
               <>
-                {/* {loading && (<Preloader/>)} */}
+                {loading && (<Preloader/>)}
                 <Header/>
                 <Home/>
                 <Slider/>
